@@ -4,7 +4,7 @@
       <div class="header__content">
         <div class="header__block">
           <!-- text -->
-          <?php include ROOT . 'templates/main/parts/swiper.tpl';?>
+          <?php include ROOT . 'templates/main/parts/swiper-text.tpl';?>
           <!--// text -->
           <a href="#arrival" class="header__button">
             <div class="button-icon-wrapper">
@@ -28,37 +28,9 @@
             </picture>
           </div>
 
-          <div class="swiper swiperHeaderImg">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="header__image-main">
-                  <picture>
-                    <source srcset="./img/hero/main.webp 1x, ./img/hero/main@2x.webp 2x" type="image/webp" />
-                    <source srcset="./img/hero/main.jpg 1x, ./img/hero/main@2x.jpg 2x" type="image/jpeg" />
-                    <img src="./img/hero/main.jpg" srcset="./img/hero/main@2x.jpg" />
-                  </picture>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="header__image-main">
-                  <picture>
-                    <source srcset="./img/hero/main.webp 1x, ./img/hero/main@2x.webp 2x" type="image/webp" />
-                    <source srcset="./img/hero/main.jpg 1x, ./img/hero/main@2x.jpg 2x" type="image/jpeg" />
-                    <img src="./img/hero/main.jpg" srcset="./img/hero/main@2x.jpg" />
-                  </picture>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="header__image-main">
-                  <picture>
-                    <source srcset="./img/hero/main.webp 1x, ./img/hero/main@2x.webp 2x" type="image/webp" />
-                    <source srcset="./img/hero/main.jpg 1x, ./img/hero/main@2x.jpg 2x" type="image/jpeg" />
-                    <img src="./img/hero/main.jpg" srcset="./img/hero/main@2x.jpg" />
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- swiper images -->
+          <?php include ROOT . 'templates/main/parts/swiper-img.tpl';?>
+          <!--//  swiper images -->
 
           <div class="header__image-less">
             <picture>
