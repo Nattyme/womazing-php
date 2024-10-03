@@ -9,7 +9,7 @@
           <a href="#arrival" class="header__button">
             <div class="button-icon-wrapper">
               <svg class="icon icon--arrow-bottom">
-                <use href="./img/svgsprite/sprite.symbol.svg#arrow-bottom"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#arrow-bottom';?>"></use>
               </svg>
             </div>
             <span class="button-solid">Открыть магазин</span>
@@ -60,7 +60,7 @@
       </div>
 
       <div class="arrival__button">
-        <a href="#" class="button-outline">Открыть магазин</a>
+        <a href="<?php echo HOST . 'shop';?>" class="button-outline">Открыть магазин</a>
       </div>
     </div>
   </section>
@@ -76,7 +76,7 @@
           <li class="feature__item">
             <div class="feature__img">
               <svg class="icon icon--approved">
-                <use href="./img/svgsprite/sprite.symbol.svg#approved"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#approved';?>"></use>
               </svg>
             </div>
             <p class="feature__name">Качество</p>
@@ -87,7 +87,7 @@
           <li class="feature__item">
             <div class="feature__img">
               <svg class="icon icon--settings">
-                <use href="./img/svgsprite/sprite.symbol.svg#settings"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#settings';?>"></use>
               </svg>
             </div>
             <p class="feature__name">Скорость</p>
@@ -98,7 +98,7 @@
           <li class="feature__item">
             <div class="feature__img">
               <svg class="icon icon--hand">
-                <use href="./img/svgsprite/sprite.symbol.svg#hand"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#hand';?>"></use>
               </svg>
             </div>
             <p class="feature__name">Ответственность</p>
@@ -110,7 +110,7 @@
       </div>
 
       <div class="feature__button">
-        <a href="#" class="link">Подробнее</a>
+        <a href="<?php echo HOST . 'benefits';?>" class="link">Подробнее</a>
       </div>
     </div>
   </section>
@@ -123,9 +123,9 @@
       <div class="about__content">
         <div class="about__img">
           <picture>
-            <source srcset="./img/about/01.webp 1x, ./img/about/01@2x.webp 2x" type="image/webp" />
-            <source srcset="./img/about/01.jpg 1x, ./img/about/01@2x.jpg 2x" type="image/jpeg" />
-            <img src="./img/about/01.jpg" srcset="./img/about/01@2x.jpg" alt="" />
+            <source srcset="<?php echo HOST . 'static/img/about/01.webp 1x,' . 'static/img/about/01@2x.webp 2x';?>" type="image/webp" />
+            <source srcset="<?php echo HOST . 'static/img/about/01.jpg 1x,' . 'static/img/about/01@2x.jpg 2x';?>" type="image/jpeg" />
+            <img src="<?php echo HOST . 'static/img/about/01.jpg';?>" srcset="<?php echo HOST . 'static/img/about/01@2x.jpg';?>" alt="" />
           </picture>
         </div>
         <div class="about__desc">

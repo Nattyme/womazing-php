@@ -4,7 +4,7 @@
       <div class="header-top__row">
         <a href="index.html" class="logo">
           <svg class="icon icon--logo">
-            <use href="./img/svgsprite/sprite.symbol.svg#logo"></use>
+            <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#logo';?>"></use>
           </svg>
           Womazing
         </a>
@@ -34,7 +34,7 @@
           <div class="header-top__user flex-block">
             <a href="good.html" class="cart">
               <svg class="icon icon--shopping-bag">
-                <use href="./img/svgsprite/sprite.symbol.svg#shopping-bag"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#shopping-bag';?>"></use>
               </svg>
               <span class="counter">3</span>
             </a>

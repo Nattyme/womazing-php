@@ -5,7 +5,7 @@
         <div class="footer__logo">
           <a href="index.html" class="logo">
             <svg class="icon icon--logo">
-              <use href="./img/svgsprite/sprite.symbol.svg#logo"></use>
+              <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#logo';?>"></use>
             </svg>
             Womazing
           </a>
@@ -23,7 +23,7 @@
             <a class="nav-list__link" href="#!">Главная</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__inner-nav" href="#!">Магазин</a>
+            <a class="nav-list__link nav-list__inner-nav" href="<?php echo HOST . 'shop';?>">Магазин</a>
             <div class="inner-nav-wrapper">
               <ul class="inner-nav__list">
                 <li class="inner-nav__item">
@@ -42,10 +42,10 @@
             </div>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link" href="#!">О&#160;бренде</a>
+            <a class="nav-list__link" href="<?php echo HOST . 'about';?>">О&#160;бренде</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link" href="#!">Контакты</a>
+            <a class="nav-list__link" href="<?php echo HOST . 'contacts';?>">Контакты</a>
           </li>
         </ul>
       </div>
@@ -59,21 +59,21 @@
           <li>
             <a href="#">
               <svg class="icon icon--instagram">
-                <use href="./img/svgsprite/sprite.symbol.svg#instagram"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#instagram';?>"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="#">
               <svg class="icon icon--facebook">
-                <use href="./img/svgsprite/sprite.symbol.svg#facebook"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#facebook';?>"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="#">
               <svg class="icon icon--twitter">
-                <use href="./img/svgsprite/sprite.symbol.svg#twitter"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#twitter';?>"></use>
               </svg>
             </a>
           </li>
@@ -81,9 +81,9 @@
         <ul class="payment-list">
           <li>
             <picture>
-              <source srcset="./img/payment/visa-mastercard.webp 1x, ./img/payment/visa-mastercard@2x.webp 2x" type="image/webp" />
-              <source srcset="./img/payment/visa-mastercard.png 1x, ./img/payment/visa-mastercard@2x.png 2x" type="image/png" />
-              <img src="./img/payment/visa-mastercard.png" srcset="./img/payment/visa-mastercard@2x.png" alt="" />
+              <source srcset="<?php echo HOST . 'static/img/payment/visa-mastercard.webp 1x,' . 'static/img/payment/visa-mastercard@2x.webp 2x';?>" type="image/webp" />
+              <source srcset="<?php echo HOST . 'static/img/payment/visa-mastercard.png 1x,' . 'static/img/payment/visa-mastercard@2x.png 2x';?>" type="image/png" />
+              <img src="<?php echo HOST . 'static/img/payment/visa-mastercard.png';?>" srcset="<?php echo HOST . 'static/img/payment/visa-mastercard@2x.png';?>" alt="" />
             </picture>
           </li>
         </ul>
