@@ -1,3 +1,3 @@
-<script src="<?php echo HOST . 'static/js/index.bundle.js';?>"></script>
+<!-- <script type="module" src="<?php echo HOST . 'static/js/index.js';?>"></script> -->
 	</body>
 </html>

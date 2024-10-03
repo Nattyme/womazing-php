@@ -56,13 +56,13 @@
           <a href="product.html" class="card">
             <div class="card__img">
               <svg class="icon icon--arrow-right">
-                <use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#arrow-right';?>"></use>
               </svg>
 
               <picture>
-                <source srcset="./img/arrival/01.webp 1x, ./img/arrival/01@2x.webp 2x" type="image/webp" />
-                <source srcset="./img/arrival/01.jpg 1x, ./img/arrival/01@2x.jpg 2x" type="image/jpeg" />
-                <img src="./img/arrival/01.jpg" srcset="./img/arrival/01@2x.jpg" alt="" />
+                <source srcset="<?php echo HOST . 'static/img/arrival/01.webp 1x,' . 'static/img/arrival/01@2x.webp 2x';?>" type="image/webp" />
+                <source srcset="<?php echo HOST . 'static/img/arrival/01.jpg 1x,' . 'static/img/arrival/01@2x.jpg 2x';?>" type="image/jpeg" />
+                <img src="<?php echo HOST . 'static/img/arrival/01.jpg';?>" srcset="<?php echo HOST . 'static/img/arrival/01@2x.jpg';?>" alt="" />
               </picture>
             </div>
             <div class="card__desc">
@@ -149,6 +149,7 @@
       </div>
     </div>
   </section>
+
   <section class="feature">
     <div class="container">
       <div class="section-title">
