@@ -7,7 +7,7 @@
 		<title><?php echo $pageTitle; ?></title>
     <link rel="stylesheet" href="<?php echo HOST . 'static/css/main.css';?>"/>
     <link
-      rel="stylesheet-swiper"
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
