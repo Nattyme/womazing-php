@@ -6,5 +6,4 @@ import swiperHeader from './modules/swiper.js';
 mobileNav();
 tab();
 // yMap();
-swiperHeader();
-
+// swiperHeader();

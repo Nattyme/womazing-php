@@ -22,9 +22,9 @@
         <div class="header__hero">
           <div class="header__image-less">
             <picture>
-              <source srcset="./img/hero/01.webp 1x, ./img/hero/01@2x.webp 2x" type="image/webp" />
-              <source srcset="./img/hero/01.jpg 1x, ./img/hero/01@2x.jpg 2x" type="image/jpeg" />
-              <img src="./img/hero/01.jpg" srcset="./img/hero/01@2x.jpg" />
+              <source srcset="<?php echo HOST . 'static/img/hero/01.webp 1x,' . 'static/img/hero/01@2x.webp 2x';?>" type="image/webp" />
+              <source srcset="<?php echo HOST . 'static/img/hero/01.jpg 1x,' . 'static/img/hero/01@2x.jpg 2x';?>" type="image/jpeg" />
+              <img src="<?php echo HOST . 'static/img/hero/01.jpg';?>" srcset="<?php echo HOST . 'static/img/hero/01@2x.jpg';?>" />
             </picture>
           </div>
 

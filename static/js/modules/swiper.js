@@ -1,6 +1,3 @@
-import Swiper from '../../swiper/bundle';
-import 'swiper/css/bundle';
-
 function swiperHeader () {
  
     const swiperHeaderText = new Swiper(".swiperHeaderText", {

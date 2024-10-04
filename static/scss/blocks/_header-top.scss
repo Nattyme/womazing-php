@@ -1,0 +1,36 @@
+.header-top {
+  position: sticky;
+  z-index: 9;
+  top: 0;
+  padding-top: 50px;
+  background-color: #fff;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.main-page .header-top {
+  padding-bottom: 40px;
+  background: linear-gradient(
+    90deg, 
+    #fff 57%, 
+    var(--page-bg-accent) 57%
+  );
+}
+
+.header-top__nav {
+	@include tablet {
+		display: none;
+	}
+}
+
+.header-top__cta {
+  width: 255px;
+}
+
+.header-top__phone {
+  column-gap: 10px;
+}
