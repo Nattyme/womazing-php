@@ -9,13 +9,14 @@
 
 .header__content {
   display: grid;
-  align-items: center;
+  align-items: flex-start;
   grid-template-columns: repeat(2, 1fr);
 }
 
 /*text*/
 .header__block {
   position: relative;
+  margin-top: 145px;
 }
 
 .header__title {

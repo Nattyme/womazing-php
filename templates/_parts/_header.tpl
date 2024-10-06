@@ -1,4 +1,5 @@
 <body class="main-page">
+  <?php include ROOT . "templates/_parts/_admin-panel.tpl"; ?>
   <header class="header-top">
     <div class="container">
       <div class="header-top__row">
@@ -23,12 +24,14 @@
               <a href="#!">Контакты</a>
             </li>
           </ul>
+         
         </nav>
         <div class="header-top__cta flex-block">
           <a href="tel:74958235412" class="header__phone flex-block">
             <svg class="icon icon--phone">
               <use href="./img/svgsprite/sprite.symbol.svg#phone"></use>
             </svg>
+
             <span>+7&#160;495&#160;823-54-12</span>
           </a>
           <div class="header-top__user flex-block">

@@ -23,12 +23,7 @@ function swiperHeader () {
       spaceBetween: 30,
     });
 
-    const swipeAllSliders = (realIndex) => {
-      swiperHeaderText.slideToLoop(realIndex);
-      swiperHeaderImg.slideToLoop(realIndex);
-    };
     
-    swiperHeaderText.on('slideChange', () => swipeAllSliders( swiperHeaderText.realIndex));
 }
 
 export default swiperHeader;

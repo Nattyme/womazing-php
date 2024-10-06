@@ -3,19 +3,19 @@
 @import './base/_vars';
 @import './base/_mixins';
 @import './base/_base';
-@import './base/_utils'; // Тест на ошибку
+@import './base/_utils'; 
 @import './base/_containers';
 @import './base/_sticky-footer';
 @import './base/_buttons';
 @import './base/_typoghraphy';
 
 /* Blocks */
-@import './blocks/_article';
 @import './blocks/_card';
 @import './blocks/_components';
 @import './blocks/_footer';
 @import './blocks/_form-contact';
 @import './blocks/_form';
+@import './blocks/_article';
 @import './blocks/_header-top';
 @import './blocks/_icons';
 @import './blocks/_logo';
@@ -28,6 +28,7 @@
 @import './blocks/_titles';
 
 /* Section */
+@import './sections/_admin-panel.scss';
 @import './sections/_about-us';
 @import './sections/_about';
 @import './sections/_arrival';
