@@ -1,7 +1,7 @@
 <header class="authorization-page__header">
   <a href="<?php echo HOST; ?>">
-    <h2 class="authorization-page__header-title">Digital Nomad</h2>
-    <p class="authorization-page__header-subtitle">cайт IT специалиста</p>
+    <h2 class="authorization-page__header-title">Womazing</h2>
+    <p class="authorization-page__header-subtitle">интернет-магазин одежды</p>
   </a>
 </header>
 
@@ -9,7 +9,7 @@
 
 <footer class="authorization-page__footer">
   <div class="authorization-page__footer__copyright">
-    <p>© Наталья Балашова</p>
-    <p>Создано в WebCademy.ru в 2024 году.</p>
+    <p>© Womazing</p>
+    <p>Создано Наталья Балашова в 2024 году.</p>
   </div>
 </footer>

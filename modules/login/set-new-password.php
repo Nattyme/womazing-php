@@ -46,6 +46,6 @@ $content = ob_get_contents();
 //Окончание буфера, очищаем вывод
 ob_end_clean();
 
-include ROOT . "templates/page-parts/_head.tpl";
+include ROOT . "templates/_page-parts/_head.tpl";
 include ROOT . "templates/login/login-page.tpl";
-include ROOT . "templates/page-parts/_foot.tpl";
+include ROOT . "templates/_page-parts/_foot.tpl";
