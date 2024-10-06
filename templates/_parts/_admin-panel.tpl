@@ -3,9 +3,11 @@
 
   <div class="admin-panel__block-list">
     <a class="admin-panel__link" href="<?php echo HOST; ?>admin" title="Перейти в панель управления сайтом">
-      <svg class="icon icon--target">
-        <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#target';?>" alt="Перейти в админ панель"></use>
-      </svg>
+      <div class="admin-panel__message">
+        <svg class="icon icon--target">
+          <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#target';?>" alt="Перейти в админ панель"></use>
+        </svg>
+      </div>
       <div class="span">Панель управления</div>
     </a>
 
@@ -27,8 +29,6 @@
         <svg class="icon icon--folder">
           <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#folder';?>" alt="Заказы"></use>
         </svg>
-        <div class="admin-panel__message-icon">
-        </div>
       </div>
       <div class="span">Заказы</div>
     </a>
@@ -36,7 +36,7 @@
 
     <!-- Комментарии -->
     <a class="admin-panel__link" href="<?php echo HOST . 'admin/comments';?>" title="Перейти к списку комментариев">
-      <div class="admin-panel__comments" data-number="15">
+      <div class="admin-panel__message">
         <svg class="icon icon--message-square">
           <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#message-square';?>" alt="Заказы"></use>
         </svg>
@@ -47,9 +47,11 @@
 
     <!-- Редактирование текущей страницы -->
     <a class="admin-panel__link" href="<?php echo HOST . 'admin/post-edit?id=' . $uriGet; ?>" title='Перейти к редактированию текущей страницы'>
-      <svg class="icon icon--edit">
-        <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#edit';?>" alt="Редактировать эту страницу"></use>
-      </svg>
+      <div class="admin-panel__message">
+        <svg class="icon icon--edit">
+          <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#edit';?>" alt="Редактировать эту страницу"></use>
+        </svg>
+      </div>
       <div class="span">Редактировать</div>
     </a>
   </div>
