@@ -1068,6 +1068,60 @@ html, body {
   font-family: var(--font-titles);
 }
 
+.authorization-form {
+  padding: 30px;
+  width: 350px;
+  display: flex;
+  display: block;
+  flex-direction: column;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.authorization-form__heading {
+  margin-bottom: 30px;
+}
+
+.authorization-form__input {
+  margin-bottom: 15px;
+}
+
+.authorization-form__button {
+  margin-bottom: 15px;
+}
+
+.authorization-form__button > button {
+  width: 100%;
+}
+
+.authorization-form__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authorization-form__links a {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid #000000;
+  font-size: 16px;
+  line-height: 1;
+  color: #000000;
+  transition: color 0.1s ease-in;
+  cursor: pointer;
+}
+
+.authorization-form__links a:hover {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.authorization-form__links a:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 /* Section */
 .admin-panel {
   position: fixed;
@@ -1502,4 +1556,90 @@ main.product-page {
 
 .section-order__header {
   margin-bottom: 214px;
+}
+
+.authorization-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--accent);
+  background-image: url(./../img/authorization-page/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.authorization-page::before,
+.authorization-page::after {
+  display: none;
+}
+
+.authorization-page::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.authorization-page__header {
+  padding-top: 40px;
+}
+
+.authorization-page__header-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.3;
+  color: #FFFFFF;
+}
+
+.authorization-page__header-subtitle {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.authorization-page__footer {
+  padding-bottom: 40px;
+}
+
+.authorization-page__footer__copyright p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* .... Authorization .... */
+.authorization-page__header {
+  text-align: center;
+}
+
+.authorization-page__header > * {
+  opacity: inherit;
+}
+
+.authorization-page__header a {
+  transition: all 0.1s ease-in;
+}
+
+.authorization-page__header a:hover {
+  text-decoration: none;
+  opacity: 0.7;
 }/*# sourceMappingURL=main.css.map */

@@ -15,3 +15,9 @@
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
 	</head>
+
+  <?php if ( isset($pageClass) && $pageClass === 'authorization-page') : ?>
+  <body class="authorization-page">
+  <?php else : ?>
+    <body class="sticky-footer main-page body-with-panel <?php echo isset($pageClass) ? $pageClass : ''; ?>">
+  <?php endif;

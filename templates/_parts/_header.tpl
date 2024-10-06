@@ -1,4 +1,4 @@
-<body class="main-page">
+
   <?php include ROOT . "templates/_parts/_admin-panel.tpl"; ?>
   <header class="header-top">
     <div class="container">
