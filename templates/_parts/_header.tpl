@@ -1,5 +1,5 @@
 
-  <?php include ROOT . "templates/_parts/_admin-panel.tpl"; ?>
+  <?php /* include ROOT . "templates/_parts/_admin-panel.tpl"; */?>
   <header class="header-top">
     <div class="container">
       <div class="header-top__row">
@@ -35,6 +35,11 @@
             <span>+7&#160;495&#160;823-54-12</span>
           </a>
           <div class="header-top__user flex-block">
+            <a href="<?php echo HOST . 'login'; ?>" class="profile">
+              <svg class="icon icon--profile">
+                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#profile';?>"></use>
+              </svg>
+            </a>
             <a href="good.html" class="cart">
               <svg class="icon icon--shopping-bag">
                 <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#shopping-bag';?>"></use>

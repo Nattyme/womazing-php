@@ -16,7 +16,7 @@
     </div>
 
     <div class="authorization-form__button">
-      <button name="login" value="login" class="primary-button" type="submit">Вход на сайт</button>
+      <button name="login" value="login" class="button-solid" type="submit">Вход на сайт</button>
     </div>
   <?php endif; ?>
 
