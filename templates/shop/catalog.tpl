@@ -1,4 +1,4 @@
-<main class="">
+<main class="inner-page">
   <section class="products">
     <div class="container">
       <div class="products__content">
@@ -60,7 +60,7 @@
               <div class="tab__block active" data-control="tab-block">
                 <?php for ($i = 0; $i < 9; $i ++) : ?>
                 <!-- card -->
-                <a href="product.html" class="card">
+                <a href="<?php echo HOST . 'shop/';?>" class="card">
                   <div class="card__img">
                     <svg class="icon icon--arrow-right">
                       <use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>

@@ -3,7 +3,7 @@
     <div class="footer__content">
       <div class="footer__column">
         <div class="footer__logo">
-          <a href="index.html" class="logo">
+          <a href="<?php echo $uriModule === 'main' ? '#' : HOST . 'main';?>" class="logo">
             <svg class="icon icon--logo">
               <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#logo';?>"></use>
             </svg>
@@ -20,7 +20,7 @@
       <div class="footer__nav">
         <ul class="nav-list">
           <li class="nav-list__item">
-            <a class="nav-list__link" href="#!">Главная</a>
+            <a class="nav-list__link" href="<?php echo HOST . 'main';?>">Главная</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link nav-list__inner-nav" href="<?php echo HOST . 'shop';?>">Магазин</a>
@@ -42,7 +42,7 @@
             </div>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link" href="<?php echo HOST . 'about';?>">О&#160;бренде</a>
+            <a class="nav-list__link" href="<?php echo HOST . 'about';?>">О&#160;компании</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link" href="<?php echo HOST . 'contacts';?>">Контакты</a>

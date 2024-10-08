@@ -63,6 +63,10 @@ switch ($uriModule) {
     require ROOT . 'modules/contacts/index.php';
     break;
 
+  case 'about':
+    require ROOT . 'modules/about/index.php';
+    break;
+
   // ::::::::::::: SHOP :::::::::::::::::::
   case 'shop':
     if ( isset($uriGet) ) {
