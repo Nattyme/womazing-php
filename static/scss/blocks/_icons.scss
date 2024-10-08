@@ -19,8 +19,13 @@
 	fill: #000;
 }
 
-.icon--profile {
+.icon--profile, .icon--logout  {
   stroke: #000;
+}
+
+.icon--logout  {
+  fill: #000;
+  stroke-width: 0;
 }
 
 .icon--arrow-bottom {
@@ -92,7 +97,7 @@
   fill: #6E9C9F;
 }
 
-.icon--target, .icon--mail, .icon--folder, .icon--message-square, .icon--edit  {
+.icon--target, .icon--mail, .icon--folder, .icon--message-square, .icon--edit {
   width: 24px;
   height: 24px;
   stroke: #fff;

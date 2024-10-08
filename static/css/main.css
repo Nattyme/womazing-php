@@ -704,8 +704,13 @@ html, body {
   fill: #000;
 }
 
-.icon--profile {
+.icon--profile, .icon--logout {
   stroke: #000;
+}
+
+.icon--logout {
+  fill: #000;
+  stroke-width: 0;
 }
 
 .icon--arrow-bottom {

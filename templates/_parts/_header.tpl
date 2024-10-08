@@ -27,15 +27,14 @@
          
         </nav>
         <div class="header-top__cta flex-block">
-          <a href="tel:74958235412" class="header__phone flex-block">
-            <svg class="icon icon--phone">
-              <use href="./img/svgsprite/sprite.symbol.svg#phone"></use>
-            </svg>
-          </a>
           <div class="header-top__user flex-block">
            
             <?php if( isset($_SESSION['login']) && $_SESSION['login'] === 1) : ?>
-              <a href="<?php echo HOST; ?>login" class="admin-panel__block-button" title="Выйти из текущего профиля">Вход</a>
+              <a href="<?php echo HOST . 'logout'; ?>" class="profile" title="Выйти из текущего профиля">
+                <svg class="icon icon--logout">
+                  <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#logout';?>"></use>
+                </svg>
+              </a>
             <?php else : ?>
               <a href="<?php echo HOST . 'login'; ?>" class="profile">
                 <svg class="icon icon--profile">
