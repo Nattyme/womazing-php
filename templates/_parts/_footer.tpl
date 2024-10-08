@@ -3,7 +3,14 @@
     <div class="footer__content">
       <div class="footer__column">
         <div class="footer__logo">
-          <a href="<?php echo $uriModule === 'main' ? '#' : HOST . 'main';?>" class="logo">
+          <a href="
+              <?php if ($uriModule === '' || $uriModule === 'main') {
+                      echo '#';
+                    } else {
+                      echo 'main';
+                    } 
+              ?>
+            " class="logo">
             <svg class="icon icon--logo">
               <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#logo';?>"></use>
             </svg>

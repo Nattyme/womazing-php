@@ -1,13 +1,21 @@
 
   <?php include ROOT . "templates/_parts/_admin-panel.tpl"; ?>
-  <header class="header-top">
+  <header class="header-top
+    <?php 
+      if ($uriModule === '' || $uriModule === 'main') {
+        echo 'header-top--gradient-bg';
+      } else {
+        echo '';
+      } 
+    ?> 
+  ">
     <div class="container">
       <div class="header-top__row">
         <a href="<?php echo HOST . 'main';?>" class="logo">
           <svg class="icon icon--logo">
             <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#logo';?>"></use>
           </svg>
-          Womazing
+          Womazing 
         </a>
         <nav class="header-top__nav nav">
           <ul class="nav">

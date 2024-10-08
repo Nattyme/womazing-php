@@ -5,20 +5,20 @@
   padding-top: 50px;
   background-color: #fff;
 
+  &--gradient-bg {
+    padding-bottom: 40px;
+    background: linear-gradient(
+      90deg, 
+      #fff 57%, 
+      var(--page-bg-accent) 57%
+    );
+  }
+
 	&__row {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-}
-
-.main-page .header-top {
-  padding-bottom: 40px;
-  background: linear-gradient(
-    90deg, 
-    #fff 57%, 
-    var(--page-bg-accent) 57%
-  );
 }
 
 .header-top__nav {
