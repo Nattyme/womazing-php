@@ -31,15 +31,18 @@
             <svg class="icon icon--phone">
               <use href="./img/svgsprite/sprite.symbol.svg#phone"></use>
             </svg>
-
-            <span>+7&#160;495&#160;823-54-12</span>
           </a>
           <div class="header-top__user flex-block">
-            <a href="<?php echo HOST . 'login'; ?>" class="profile">
-              <svg class="icon icon--profile">
-                <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#profile';?>"></use>
-              </svg>
-            </a>
+           
+            <?php if( isset($_SESSION['login']) && $_SESSION['login'] === 1) : ?>
+              <a href="<?php echo HOST; ?>login" class="admin-panel__block-button" title="Выйти из текущего профиля">Вход</a>
+            <?php else : ?>
+              <a href="<?php echo HOST . 'login'; ?>" class="profile">
+                <svg class="icon icon--profile">
+                  <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#profile';?>"></use>
+                </svg>
+              </a>
+            <?php endif; ?>
             <a href="good.html" class="cart">
               <svg class="icon icon--shopping-bag">
                 <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#shopping-bag';?>"></use>
