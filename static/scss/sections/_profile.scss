@@ -1,4 +1,27 @@
 /* Profile*/
+.profile-form__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.input__label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+}
+.input__label > .input:first-child {
+  margin-top: 10px;
+}
 .form-group-wrapper {
   padding: 20px;
   margin-top: 30px;
@@ -21,4 +44,25 @@
   font-size: 16px;
   line-height: 1;
   color: #7E9BBD
+}
+
+.page-profile {
+}
+
+.profile {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.profile__title {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.heading {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #000000;
 }

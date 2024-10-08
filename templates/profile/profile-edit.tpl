@@ -1,8 +1,8 @@
 <main class="page-profile">
   <?php if ( $user['id'] === 0) : ?>
-  <section class="section">
+  <section class="profile">
     <div class="container">
-      <div class="section__title">
+      <div class="profile__title">
         <h2 class="heading mb-25">Профиль пользователя</h2>
         <p>Чтобы посмотреть свой профиль
           <a href="<?php echo HOST; ?>login">войдите</a>
@@ -13,22 +13,24 @@
     </div>
   </section>
   <?php else: ?>
-  <section class="section">
-    <div class="section__title">
-      <div class="container">
+  <section class="profile">
+    <div class="container">
+      <div class="profile__title">
         <h2 class="heading">Редактировать профиль </h2>
       </div>
     </div>
+   
+    </div>
 
-    <div class="section__body">
+    <div class="profile__body">
       <div class="container">
 
         <?php if (isset($uriGet)) : ?>
-          <form enctype="multipart/form-data" action="<?php echo HOST; ?>profile-edit/<?php echo $uriGet; ?>" method="POST">
+          <form class="profile-form" enctype="multipart/form-data" action="<?php echo HOST; ?>profile-edit/<?php echo $uriGet; ?>" method="POST">
         <?php else : ?>
-          <form enctype="multipart/form-data" action="<?php echo HOST; ?>profile-edit" method="POST">
+          <form class="profile-form" enctype="multipart/form-data" action="<?php echo HOST; ?>profile-edit" method="POST">
         <?php endif; ?>
-            <div class="row justify-content-center">
+            <div class="profile-form__row">
               <div class="col-md-8">
                 <?php include ROOT . "templates/components/errors.tpl"; ?>
                 <?php include ROOT . "templates/components/success.tpl"; ?>
@@ -69,7 +71,7 @@
               </div>
             </div>
 
-            <div class="row justify-content-center pt-40 pb-40">
+            <div class="profile-form__row">
               <div class="col-2">
                 <div class="avatar-big">
                   <?php if ( !empty($user->avatar)) : ?>
@@ -98,7 +100,7 @@
               </div>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="profile-form__row">
               <div class="col-md-8">
                 <div class="form-group">
                   <label class="input__label">

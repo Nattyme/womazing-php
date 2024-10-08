@@ -1,5 +1,5 @@
 
-  <?php /* include ROOT . "templates/_parts/_admin-panel.tpl"; */?>
+  <?php include ROOT . "templates/_parts/_admin-panel.tpl"; ?>
   <header class="header-top">
     <div class="container">
       <div class="header-top__row">

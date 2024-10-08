@@ -1,10 +1,10 @@
 <main class="page-profile">
   <!-- Если пользователя открывает profile без входа на сайт -->
   <?php if( isset($userNotLoggedIn)) : ?>
-    <div class="section">
+    <div class="profile">
 			<div class="container">
-				<div class="section__title">
-					<h2 class="heading mb-25">Профиль пользователя</h2>
+				<div class="profile__title">
+					<h2 class="heading">Профиль пользователя</h2>
           <p>Чтобы посмотреть свой профиль
             <a href="<?php echo HOST; ?>login">войдите</a>
             либо
@@ -15,9 +15,9 @@
 		</div>
   <!-- Если пользователя с таким ID не существует -->
   <?php elseif ($user['id'] === 0) : ?>
-    <div class="section">
+    <div class="profile">
 			<div class="container">
-				<div class="section__title">
+				<div class="profile__title">
 					<h2 class="heading">Такого пользователя не существует</h2>
           <p><a href="<?php echo HOST; ?>">Вернуться на главную</a></p>
 				</div>
@@ -27,9 +27,9 @@
   
   <!-- Если пользователь НАЙДЕН -->
   <?php else : ?>
-    <section class="section">
+    <section class="profile">
 			<div class="container">
-				<div class="section__title">
+				<div class="profile__title">
 					<h2 class="heading">Профиль пользователя </h2>
 				</div>
 				<div class="section__body">
@@ -49,7 +49,7 @@
                       Пустой профиль 😑 
                   </div>
                   <!-- Кнопка редактирования профиля -->
-                  <?php include ROOT . "templates/profile/_parts/button-edit-profile.tpl"; ?>
+                  <?php include ROOT . "templates/profile/_parts/_button-edit-profile.tpl"; ?>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@
                   <!-- // Видно только владельцу профиля или админу-->
                 </div>
                 <!-- Кнопка редактирования профиля -->
-                <?php include ROOT . "templates/profile/_parts/button-edit-profile.tpl"; ?>
+                <?php include ROOT . "templates/profile/_parts/_button-edit-profile.tpl"; ?>
               </div>
 					  </div>
           <?php endif; ?>
