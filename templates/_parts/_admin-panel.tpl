@@ -1,5 +1,5 @@
 
-<?php if( isset($_SESSION['login']) && $_SESSION['login'] === 1) : ?>
+<?php if( isset($_SESSION['login']) && $_SESSION['role'] === 'admin') : ?>
 <div class="admin-panel">
 
   <div class="admin-panel__block-list">
@@ -12,7 +12,7 @@
       <div class="span">Панель управления</div>
     </a>
 
-    <!-- Сообщения -->
+  <!-- Сообщения -->
     <a class="admin-panel__link" href="<?php echo HOST; ?>admin/messages" title="Перейти списку сообщений">
       <div class="admin-panel__message">
         <svg class="icon icon--mail">
@@ -34,7 +34,7 @@
       <div class="span">Заказы</div>
     </a>
     <!--// Заказы -->
-
+  
     <!-- Комментарии -->
     <a class="admin-panel__link" href="<?php echo HOST . 'admin/comments';?>" title="Перейти к списку комментариев">
       <div class="admin-panel__message">
@@ -47,14 +47,16 @@
     <!--// Комментарии -->
 
     <!-- Редактирование текущей страницы -->
-    <a class="admin-panel__link" href="<?php echo HOST . 'admin/post-edit?id=' . $uriGet; ?>" title='Перейти к редактированию текущей страницы'>
-      <div class="admin-panel__message">
-        <svg class="icon icon--edit">
-          <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#edit';?>" alt="Редактировать эту страницу"></use>
-        </svg>
-      </div>
-      <div class="span">Редактировать</div>
-    </a>
+    <?php if ( $uriModule === 'blog' && isset($uriGet) && $uriGet !== 'cat') : ?>
+      <a class="admin-panel__link" href="<?php echo HOST . 'admin/post-edit?id=' . $uriGet; ?>" title='Перейти к редактированию текущей страницы'>
+        <div class="admin-panel__message">
+          <svg class="icon icon--edit">
+            <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#edit';?>" alt="Редактировать эту страницу"></use>
+          </svg>
+        </div>
+        <div class="span">Редактировать</div>
+      </a>
+    <?php endif; ?>
   </div>
 
   <div class="admin-panel__block-list">
@@ -62,14 +64,15 @@
   </div>
  
 </div> 
-
-<?php else : ?>
-<div class="admin-panel">
-  <div class="admin-panel__block-list">
-  </div>
-  <div class="admin-panel__block-list">
-    <a href="<?php echo HOST; ?>login" class="admin-panel__block-button" title="Выйти из текущего профиля">Вход</a>
-  </div>
-
-</div>
 <?php endif; ?>
+
+
+  <!-- <div class="admin-panel">
+    <div class="admin-panel__block-list">
+    </div>
+    <div class="admin-panel__block-list">
+      <a href="<?php echo HOST; ?>login" class="admin-panel__block-button" title="Выйти из текущего профиля">Вход</a>
+    </div>
+
+  </div> -->
+
