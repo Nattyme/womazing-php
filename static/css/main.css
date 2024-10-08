@@ -675,6 +675,10 @@ html, body {
 
 .header-top__cta {
   width: 255px;
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .header-top__phone {

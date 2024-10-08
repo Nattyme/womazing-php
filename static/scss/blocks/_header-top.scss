@@ -29,6 +29,10 @@
 
 .header-top__cta {
   width: 255px;
+
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 20px;
 }
 
 .header-top__phone {
