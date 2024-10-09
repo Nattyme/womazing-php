@@ -39,5 +39,62 @@
   color: #fff;
 }
 
+.profile-form .tab__nav {
+  margin-bottom: 15px;
+}
+
+.profile-form .tab__nav {
+  justify-content: center;
+}
+
+.profile-form .tab__block.active {
+  display: block;
+}
+
+.tab__nav-button--outline {
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+
+  border: none;
+  background-color: #fff;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.3);
+  
+  transition: all 0.2s ease;
+
+  &.active {
+    color: #000;
+    background-color: #fff;
+  }
+
+  &:hover {
+    background: #fff;
+  }
+}
+
+.tab__nav-button--outline::before {
+position: absolute;
+content: "";
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+display: none;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background-color: #000;
+transition: all 2s ease;
+
+display: none;
+}
+
+.tab__nav-button--outline.active::before {
+display: inline-block;
+}
+
 
 

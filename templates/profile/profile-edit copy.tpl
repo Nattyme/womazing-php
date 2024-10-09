@@ -96,6 +96,7 @@
               </div>
 
               
+              
                   <div class="form-group form-group--buttons-left">
                     <button name="updateProfile" class="button-solid" type="submit">Сохранить</button>
                     <a class="button-outline" href="<?php echo HOST; ?>profile">Отмена</a>
