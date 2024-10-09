@@ -100,7 +100,7 @@ if( isset($_POST['login']) ) {
         $_SESSION['fav_list'] = $temp_fav_list;
         
         $_SESSION['success'][] = ['title' => 'Вы успешно вошли на сайт. Рады снова видеть вас'];
-
+        
         header('Location: ' . HOST . 'profile');
         exit();
       } else {

@@ -40,6 +40,10 @@ if ( isset($_POST['register']) ) {
   //Если нет ошибок - Регистрируем пользователя
   if ( empty($_SESSION['errors']) ) {
     $user = R::dispense('users');
+    
+    // Создаем бин в таблице адресов доставки
+    $userDelivery = R::dispense('address');
+
     $user->email = $_POST['email'];
     $user->role = 'user';
     // Сохраняем пароль в зашифрованном виде функцией password_hash
@@ -47,6 +51,10 @@ if ( isset($_POST['register']) ) {
 
     $result = R::store($user);
 
+    // Сохраняем id пользователя в таблицу адресов доставки
+    $userDelivery->user_id = $result;
+    R::store($userDelivery);
+    
     if ( is_int($result) ) {
       // Автологин пользователя после регистрации
       $_SESSION['logged_user'] = $user;

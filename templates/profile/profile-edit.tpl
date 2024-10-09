@@ -28,16 +28,8 @@
          
         <?php include ROOT . 'templates/profile/_parts/_profile-edit-tabs.tpl';?>
           
-          <!-- Кнопки -->
-          <div class="profile-form__row">
-            <div class="profile-form__buttons">
-              <button name="updateProfile" class="button-solid" type="submit">Сохранить</button>
-              <a class="button-outline" href="<?php echo HOST; ?>profile">Отмена</a>
-            </div>
-            
-          </div>
-          <!-- Кнопки -->
-        </form>
+         
+          </form>
       </div>
        
      

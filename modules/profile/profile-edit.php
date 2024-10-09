@@ -19,8 +19,6 @@
         $user->email = htmlentities(trim($_POST['email']));
         $user->country = htmlentities(trim($_POST['country']));
         $user->city = htmlentities(trim($_POST['city']));
-        $user->phone = htmlentities(trim($_POST['phone']));
-        $user->address = htmlentities(trim($_POST['address']));
 
         // Если передано изображение - уменьшаем, сохраняем, записываем в БД
         if( isset($_FILES['avatar']['name']) && $_FILES['avatar']['tmp_name'] !== '') {
@@ -62,7 +60,7 @@
           $user->avatar = '';
           $user->avatarSmall = '';
         }
-
+      
         R::store($user);
 
         if ($user->id ===  $_SESSION['logged_user']['id']) {
@@ -74,14 +72,97 @@
       }
     }
   }
+
+  function updateUserDeliveryAndGoToProfile($userDelivery) {
+    if ( isset($_POST['updateProfileDelivery'])) {
+      // Проверить поля на заполненность
+      if ( trim($_POST['delivery_name']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите имя получателя'];
+      }
+
+      if ( trim($_POST['delivery_surname']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите фамилию получателя'];
+      }
+
+      if ( trim($_POST['delivery_fathername']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите отчество получателя'];
+      }
+
+      if ( trim($_POST['delivery_country']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите страну получателя'];
+      }
+
+      if ( trim($_POST['delivery_country']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите страну получателя'];
+      }
+
+      if ( trim($_POST['delivery_city']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите город получателя'];
+      }
+
+      if ( trim($_POST['delivery_area']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите область/район получателя'];
+      }
+
+      if ( trim($_POST['delivery_street']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите улицу получателя'];
+      }
+
+      if ( trim($_POST['delivery_building']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите номер дома получателя'];
+      }
+
+      if ( trim($_POST['delivery_flat']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите номер квартиры получателя'];
+      }
+
+      if ( trim($_POST['delivery_index']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите индекс получателя'];
+      }
+
+      if ( trim($_POST['delivery_phone']) === '') {
+        $_SESSION['errors'][] = ['title' => 'Введите телефон получателя'];
+      }
+
+      // Если ошибок нет - обновить данные в БД
+      if ( empty($_SESSION['errors']) ) {
+        $userDelivery->name = htmlentities(trim($_POST['delivery_name']));
+        $userDelivery->surname = htmlentities(trim($_POST['delivery_surname']));
+        $userDelivery->fathername = htmlentities(trim($_POST['delivery_fathername']));
+        $userDelivery->country = htmlentities(trim($_POST['delivery_country']));
+        $userDelivery->city = htmlentities(trim($_POST['delivery_city']));
+        $userDelivery->area = htmlentities(trim($_POST['delivery_area']));
+        $userDelivery->street = htmlentities(trim($_POST['delivery_street']));
+        $userDelivery->building = htmlentities(trim($_POST['delivery_building']));
+        $userDelivery->flat = htmlentities(trim($_POST['delivery_flat']));
+        $userDelivery->phone = htmlentities(trim($_POST['delivery_phone']));
+
+        R::store($userDelivery);
+
+        if ($userDelivery->user_id ===  $_SESSION['logged_user']['id']) {
+          $_SESSION['logged_user'] = $userDelivery['user_id'];
+        }
+        
+        header('Location: ' . HOST . 'profile/' . $userDelivery['user_id']);
+        exit();
+      }
+    }
+  }
+  // print_r($userDelivery);
+  // die();
   // Проверка на то, что юзер залогинен
   if( isset($_SESSION['login']) && $_SESSION['login'] === 1) {
     // Юзер залогинен. Проверка на роль - пользователь или админ
     if( $_SESSION['logged_user']['role'] === 'user') {
       // Это обычный пользователь
+      // Загружаем пользователя
       $user = R::load('users', $_SESSION['logged_user']['id']);
-      updateUserAndGoToProfile($user);  //Обновляем данные пользователя
 
+      //Загружаем адрес доставки
+      $userDelivery = R::findOne('address', ' user_id = ? ', [$_SESSION['logged_user']['id']]);
+  
+      updateUserAndGoToProfile($user);  //Обновляем данные пользователя
+      updateUserDeliveryAndGoToProfile($userDelivery); //Обновляем данные доставки  пользователя
     } else if ( $_SESSION['logged_user']['role'] === 'admin') {
       // Это администратор сайта. Делаем проверку на доп парам - ID пользователя для редактирования
       if ( isset($uriGet)) {
