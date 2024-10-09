@@ -1,5 +1,8 @@
 <?php 
-// require_once ROOT . "./libs/functions.php";
+require_once ROOT . "./libs/functions.php";
+$uriModule = getModuleName();
+$uriGet = getUriGet();
+$uriGetParam = getUriGetParam();
 
 // $pagination = pagination($settings['card_on_page_shop'], 'products');
 // $productsDB = R::find('products', 'ORDER BY id DESC ' . $pagination['sql_page_limit']);
@@ -40,8 +43,8 @@
 $pageTitle = "Каталог товаров";
 
 // Подключение шаблонов страницы
-include ROOT . "templates/_page-parts/_head.tpl";
-include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/shop/catalog.tpl";
-include ROOT . "templates/_parts/_footer.tpl";
-include ROOT . "templates/_page-parts/_foot.tpl";
+include ROOT . 'templates/_page-parts/_head.tpl';
+include ROOT . 'templates/_parts/_header.tpl';
+include ROOT . 'templates/shop/catalog.tpl';
+include ROOT . 'templates/_parts/_footer.tpl';
+include ROOT . 'templates/_page-parts/_foot.tpl';

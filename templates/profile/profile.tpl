@@ -32,9 +32,9 @@
 				<div class="profile__title">
 					<h2 class="heading">Профиль пользователя </h2>
 				</div>
-				<div class="section__body">
-          <div class="row justify-content-center">
-            <div class="col-md-6">
+				<div class="profile__body">
+          <div class="notifications-wrapper">
+            <div class="notifications-wrapper__row">
               <?php include ROOT . "templates/components/errors.tpl"; ?>
               <?php include ROOT . "templates/components/success.tpl"; ?>
             </div>
@@ -42,7 +42,7 @@
 
           <!-- Блок пустого профиля -->
           <?php if (empty($user->name)) : ?>
-            <div class="row justify-content-center">
+            <div class="profile__row profile__wrapper">
               <div class="col-md-6">
                 <div class="enter-or-reg flex-column flex-row-gap">
                   <div class="enter-or-reg__text">

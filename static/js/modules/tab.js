@@ -7,6 +7,7 @@ function tab() {
 
   tabButtons.forEach(function (item, index) {
     item.addEventListener('click', function() {
+      console.log('hey');
       const currentButton = item;
       const contentBlocks = document.querySelectorAll('[data-control="tab-block"]');
       const currentBlock = contentBlocks[index];

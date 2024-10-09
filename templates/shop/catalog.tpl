@@ -6,9 +6,11 @@
           <div class="shop-header__title">
             <h1 class="h1">Магазин</h1>
           </div>
-          <div class="breadcrumbs">
-            <p>Главная <span>&#8212;</span> Магазин</p>
-          </div>
+
+          <!-- breadcrumbs -->
+          <?php include ROOT . 'templates/_parts/breadcrumbs/breadcrumbs.tpl';?>
+          <!-- // breadcrumbs -->
+
         </header>
         <div class="products__pages-shown">
           <div class="pages-shown">

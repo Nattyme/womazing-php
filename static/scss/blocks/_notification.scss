@@ -1,3 +1,22 @@
+.notifications-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.notifications-wrapper__row {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  flex: 0 0 50%;
+  max-width: 50%;
+
+}
+
 .notifications {
   margin-bottom: 20px;
 }
