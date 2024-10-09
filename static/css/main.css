@@ -1833,7 +1833,7 @@ main.product-page {
 }
 
 .profile-input__label {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
   font-family: var(--font-secondary);
   font-weight: 700;
@@ -1845,28 +1845,21 @@ main.product-page {
   margin-top: 10px;
 }
 
-.form-group-wrapper {
-  padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  border: 1px solid #7e9bbd;
-  border-radius: 6px;
+.profile-form__group-wrapper {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.profile-form__group-wrapper > * {
+  max-width: 30%;
 }
 
-.form-group-wrapper__header {
+.profile-form__group-header {
   margin-bottom: 10px;
   text-align: center;
 }
-
-.form-group-wrapper__header p {
+.profile-form__group-header p {
   display: inline-block;
-}
-
-.form-group-wrapper__title {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1;
-  color: #7e9bbd;
 }
 
 .section-cart__header {

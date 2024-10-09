@@ -19,7 +19,7 @@
           <div class="profile-form__container">
             <?php include ROOT . "templates/components/errors.tpl"; ?>
             <?php include ROOT . "templates/components/success.tpl"; ?>
-            <div class="form-group">
+            <div class="profile-form__group">
               <label class="profile-input__label">
                 Введите имя 
                 <input 
@@ -31,7 +31,7 @@
                 />
               </label>
             </div>
-            <div class="form-group">
+            <div class="profile-form__group">
               <label class="profile-input__label">
                 Введите фамилию 
                 <input 
@@ -43,8 +43,8 @@
                 />
               </label>
             </div>
-            <div class="form-group">
-              <label class="profile-input">Введите email 
+            <div class="profile-form__group">
+              <label class="profile-input__label">Введите email 
                 <input 
                   class="profile-input" 
                   type="text" placeholder="Email"
@@ -87,7 +87,7 @@
 
         <div class="profile-form__row">
           <div class="profile-form__container">
-            <div class="form-group">
+            <div class="profile-form__group">
               <label class="profile-input__label">
                 Введите страну 
                 <input 
@@ -99,7 +99,7 @@
                 />
               </label>
             </div>
-            <div class="form-group">
+            <div class="profile-form__group">
               <label class="profile-input__label">
                 Введите город 
                 <input 
@@ -120,8 +120,45 @@
     <!-- Доставка -->
     <div class="tab__block" data-control="tab-block">
       <div class="profile-form__row">
-        <div class="col-md-8">
-          <div class="form-group">
+        <div class="profile-form__container">
+        <div class="profile-form__group">
+            <label class="profile-input__label">
+              Введите имя получателя
+              <input 
+                class="profile-input" 
+                type="text" 
+                placeholder="Имя"
+                name="post_name"
+                value="<?php echo isset($_POST['post_name']) ? $_POST['post_name'] : $user->country; ?>"
+              />
+            </label>
+          </div>
+          <div class="profile-form__group">
+            <label class="profile-input__label">
+              Введите фамилию получателя
+              <input 
+                class="profile-input" 
+                type="text" 
+                placeholder="Фамилия получателя"
+                name="post_surname"
+                value="<?php echo isset($_POST['post_surname']) ? $_POST['post_surname'] : $user->country; ?>"
+              />
+            </label>
+          </div>
+          <div class="profile-form__group">
+            <label class="profile-input__label">
+              Введите отчество получателя
+              <input 
+                class="profile-input" 
+                type="text" 
+                placeholder="Отчество получателя"
+                name="post_fathername"
+                value="<?php echo isset($_POST['post_fathername']) ? $_POST['post_fathername'] : $user->country; ?>"
+              />
+            </label>
+          </div>
+
+          <div class="profile-form__group">
             <label class="profile-input__label">
               Введите страну 
               <input 
@@ -133,7 +170,7 @@
               />
             </label>
           </div>
-          <div class="form-group">
+          <div class="profile-form__group">
             <label class="profile-input__label">
               Введите город 
               <input 
@@ -145,32 +182,83 @@
               />
             </label>
           </div>
-          <fieldset class="
-          ">
-            <div class="form-group-wrapper__header">
-              <p class="form-group-wrapper__title">Информация для заказа товаров в интернет-магазине.</p>
-              <p>(Не видна другим пользователям)</p>
-            </div>
-          
-            <div class="form-group">
-              <label class="profile-input__label">Введите номер телефона 
+          <div class="profile-form__group">
+            <label class="profile-input__label">
+              Введите область/район
+              <input 
+                class="profile-input" 
+                type="text" 
+                placeholder="Область, район"
+                name="area"
+                value="<?php echo isset($_POST['area']) ? $_POST['area'] : $user->city; ?>"
+              />
+            </label>
+          </div>
+
+          <div class="profile-form__group">
+            <label class="profile-input__label">
+              Введите улицу
+              <input 
+                class="profile-input" 
+                type="text" 
+                placeholder="Улица"
+                name="area"
+                value="<?php echo isset($_POST['street']) ? $_POST['street'] : $user->city; ?>"
+              />
+            </label>
+          </div>
+
+          <div class="profile-form__group-wrapper">
+            <div class="profile-form__group">
+              <label class="profile-input__label">
+                Введите номер дома
                 <input 
                   class="profile-input" 
-                  type="text" placeholder="Телефон"
-                  name="phone"
-                  value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : $user->phone; ?>"
+                  type="text" 
+                  placeholder="Номер дома"
+                  name="build"
+                  value="<?php echo isset($_POST['build']) ? $_POST['build'] : $user->city; ?>"
                 />
               </label>
             </div>
-            <div class="form-group">
-              <label class="profile-input">Введите адрес доставки
-                <textarea class="textarea mt-10" name="address" placeholder="Введите адрес доставки" title="Адрес доставки">
-                  <?php echo isset($_POST['address']) ? $_POST['address'] : $user->address; ?>
-                </textarea>
+
+            <div class="profile-form__group">
+              <label class="profile-input__label">
+                Введите номер квартиры
+                <input 
+                  class="profile-input" 
+                  type="text" 
+                  placeholder="Номер квартиры"
+                  name="flat"
+                  value="<?php echo isset($_POST['flat']) ? $_POST['flat'] : $user->city; ?>"
+                />
               </label>
             </div>
-          </fieldset>
+          </div>
+         
 
+          <div class="profile-form__group">
+            <label class="profile-input__label">Введите почтовый индекс
+              <input 
+                class="profile-input" 
+                type="text" placeholder="Почтовый индекс"
+                name="phone"
+                value="<?php echo isset($_POST['index']) ? $_POST['index'] : $user->phone; ?>"
+              />
+            </label>
+          </div>
+          
+          <div class="profile-form__group">
+            <label class="profile-input__label">Введите номер телефона 
+              <input 
+                class="profile-input" 
+                type="text" placeholder="Телефон"
+                name="phone"
+                value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : $user->phone; ?>"
+              />
+            </label>
+          </div>
+     
         </div>
       </div>
         
