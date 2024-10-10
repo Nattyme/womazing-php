@@ -139,11 +139,11 @@
 
         R::store($userDelivery);
 
-        if ($userDelivery->user_id ===  $_SESSION['logged_user']['id']) {
-          $_SESSION['logged_user'] = $userDelivery['user_id'];
+        if ($user->id ===  $_SESSION['logged_user']['id']) {
+          $_SESSION['logged_user'] = $user;
         }
         
-        header('Location: ' . HOST . 'profile/' . $userDelivery['user_id']);
+        header('Location: ' . HOST . 'profile/' . $user->id);
         exit();
       }
     }
