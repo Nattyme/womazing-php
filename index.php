@@ -88,4 +88,13 @@ switch ($uriModule) {
   case 'removefromcart':
     require ROOT . 'modules/cart/remove.php';
     break;
+
+  // ::::::::::::: ORDERS :::::::::::::::::::
+  case 'neworder':
+    require ROOT . 'modules/orders/new.php';
+    break;
+
+  case 'ordercreated':
+    require ROOT . 'modules/orders/created.php';
+    break;
 }

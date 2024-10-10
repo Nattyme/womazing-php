@@ -1,3 +1,5 @@
 <div class="breadcrumbs">
-  <p><a href="<?php echo HOST . 'main';?>">Главная</a> <span>&#8212;</span> Магазин</p>
+  <a href="<?php echo HOST . 'main';?>" class="breadcrumb ">Главная</a> 
+  <span>&mdash;</span> 
+  <a href="#!" class="breadcrumb breadcrumb--active">Магазин</a> 
 </div>

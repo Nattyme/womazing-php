@@ -31,7 +31,7 @@
               <div class="tab__block active" data-control="tab-block">
                 <?php for ($i = 0; $i < 9; $i ++) : ?>
                 <!-- card -->
-                <a href="product.html" class="card">
+                <a href="<?php echo HOST . 'shop/1';?>" class="card">
                   <div class="card__img">
                     <svg class="icon icon--arrow-right">
                       <use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
@@ -93,7 +93,7 @@
               <div class="tab__block active" data-control="tab-block">
                 <?php for ($i = 0; $i < 9; $i ++) : ?>
                 <!-- card -->
-                <a href="product.html" class="card">
+                <a href="<?php echo HOST . 'product';?>" class="card">
                   <div class="card__img">
                     <svg class="icon icon--arrow-right">
                       <use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>

@@ -1,12 +1,5 @@
-.order {
-}
-.container {
-}
 .order__header {
   margin-bottom: 214px;
-}
-
-.order__body {
 }
 
 .order__row {
@@ -20,8 +13,15 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .order__img {
- margin-right: 32px;
+  margin-right: 32px;
+  overflow: hidden;
+
+  img {
+    width: 96px;
+    height: 96px;
+  }
 }
 
 .order__text {

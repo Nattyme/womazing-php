@@ -69,7 +69,7 @@
             <div class="page-shopping-cart__final-check">
               <span class="button-fake">Итого: $129</span>
             </div>
-            <a href="#" class="button-solid">
+            <a href="<?php echo HOST . 'neworder';?>" class="button-solid">
               Оформить заказ
             </a>
           </div>
