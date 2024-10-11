@@ -1,4 +1,4 @@
-<main class="inner-page">
+<main class="inner-page inner-page--products">
   <section class="products">
     <div class="container">
       <div class="products__content">

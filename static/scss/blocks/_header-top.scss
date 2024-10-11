@@ -1,17 +1,23 @@
 .header-top {
   position: sticky;
-  z-index: 9;
+  z-index: 999;
   top: 0;
+  right: 0;
+  left: 0;
+  
   padding-top: 50px;
+  padding-bottom: 40px;
+
   background-color: #fff;
 
   &--gradient-bg {
-    padding-bottom: 40px;
     background: linear-gradient(
       90deg, 
       #fff 57%, 
       var(--page-bg-accent) 57%
     );
+    transition: background-color 1s linear;
+    -webkit-transition: background-color 1s linear;
   }
 
 	&__row {

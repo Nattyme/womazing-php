@@ -1,6 +1,6 @@
 
   <?php include ROOT . "templates/_parts/_admin-panel.tpl"; ?>
-  <header class="header-top
+  <header class="header-top 
     <?php 
       if ($uriModule === '' || $uriModule === 'main') {
         echo 'header-top--gradient-bg';
@@ -9,6 +9,7 @@
       } 
     ?> 
   ">
+ 
     <div class="container">
       <div class="header-top__row">
         <a href="<?php echo HOST . 'main';?>" class="logo">
