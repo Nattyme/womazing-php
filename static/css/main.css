@@ -366,15 +366,11 @@ html, body {
 }
 
 .section-title {
-  margin-bottom: 92px;
-}
-
-.shop-header {
-  margin-bottom: 65px;
-}
-
-.shop-header__title {
   margin-bottom: 26px;
+}
+
+.products__header {
+  margin-bottom: 65px;
 }
 
 .heading {
@@ -1891,6 +1887,10 @@ main.product-page {
   margin-bottom: 130px;
 }
 
+.product__header {
+  margin-bottom: 102px;
+}
+
 .product__content {
   display: flex;
   align-items: center;
@@ -1902,6 +1902,14 @@ main.product-page {
   display: flex;
   -moz-column-gap: 11px;
        column-gap: 11px;
+}
+
+.product__img {
+  overflow: hidden;
+}
+.product__img img {
+  width: 536px;
+  height: 720px;
 }
 
 .profile {
@@ -2008,12 +2016,8 @@ main.product-page {
   display: inline-block;
 }
 
-.section-cart__header {
-  margin-bottom: 138px;
-}
-
-.section-order__header {
-  margin-bottom: 214px;
+.page-order__header {
+  margin-bottom: 216px;
 }
 
 .link-to-page {

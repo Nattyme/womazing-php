@@ -1,8 +1,8 @@
 <main class="product-page">
   <section class="product">
     <div class="container">
-      <header class="shop-header">
-        <div class="shop-header__title">
+      <header class="product__header">
+        <div class="section-title">
           <h1 class="h1">Свитшот Sweet Shot</h1>
         </div>
         
@@ -17,7 +17,7 @@
       
       <div class="product__content">
         <div class="product__img">
-          <img src="./../img/card-full/01.jpg" srcset="./../img/card-full/01@2x.jpg" alt="">
+          <img src="<?php echo HOST . 'static/img/card-full/01.jpg';?>" srcset="<?php echo HOST . 'static/img/card-full/01@2x.jpg';?>" alt="">
         </div>
         <div class="product__desc">
           <div class="product__price"><span class="price">$311</span><span class="price-old">$450</span></div>
@@ -45,8 +45,34 @@
           <h2 class="h2">Связанные товары</h2>
         </div>
         <div class="cards-row">
-          @@include('./blocks/card.html')
-          @@include('./blocks/card.html')
+        <?php for ($i = 0; $i < 3; $i ++) : ?>
+                <!-- card -->
+                <a href="<?php echo HOST . 'shop/1';?>" class="card">
+                  <div class="card__img">
+                    <svg class="icon icon--arrow-right">
+                      <use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
+                    </svg>
+
+                    <picture>
+                      <source srcset="<?php echo HOST .'static/img/arrival/01.webp 1x,' . 'static/img/arrival/01@2x.webp 2x';?>" type="image/webp" />
+                      <source srcset="<?php echo HOST .'static/img/arrival/01.jpg 1x,' . 'static/img/arrival/01@2x.jpg 2x';?>" type="image/jpeg" />
+                      <img src="<?php echo HOST .'static/img/arrival/01.jpg';?>" srcset="<?php echo HOST . 'static/img/arrival/01@2x.jpg';?>" alt="" />
+                    </picture>
+                  </div>
+                  <div class="card__desc">
+                    <div class="card__title">
+                      <p>Футболка USA</p>
+                    </div>
+                    <div class="card__price">
+                      <span>$229</span>
+                      <span>$129</span>
+                    </div>
+                  </div>
+                </a>
+                <!--// card -->
+                <?php endfor; ?>
+          <!-- @@include('./blocks/card.html')
+          @@include('./blocks/card.html') -->
         </div>
       </div>
     </div>

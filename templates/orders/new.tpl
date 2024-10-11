@@ -40,9 +40,9 @@
               <div class="form-order__block">
                 <div class="form-order__title">
                   <h3>Комментарии</h3>
-                  <div class="form-input-wrapper">
-                    <textarea type="text" class="form-textarea" name="message">Сообщение</textarea>
-                  </div>
+                </div>
+                <div class="form-input-wrapper">
+                  <textarea type="text" class="form-textarea" name="message">Сообщение</textarea>
                 </div>
               </div>
           </div>

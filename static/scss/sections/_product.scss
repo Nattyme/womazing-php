@@ -7,6 +7,10 @@ main.product-page {
   margin-bottom: 130px;
 }
 
+.product__header {
+  margin-bottom: 102px;
+}
+
 .product__content {
   display: flex;
   align-items: center;
@@ -20,6 +24,16 @@ main.product-page {
   display: flex;
   column-gap: 11px;
 }
+
+.product__img {
+  overflow: hidden;
+
+  img {
+    width: 536px;
+    height: 720px;
+  }
+}
+
 .product__qty {
 }
 .button-solid {
