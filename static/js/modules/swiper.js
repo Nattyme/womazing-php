@@ -2,7 +2,7 @@ function swiperHeader () {
 
     const swiperHeaderText = new Swiper(".swiperHeaderText", {
       autoplay:{
-        delay:	5000,
+        delay:	2000,
         pauseOnMouseEnter: true,
       },
       spaceBetween: 30,

@@ -1,4 +1,4 @@
-<div class="swiper swiperHeaderAbout">
+<div class="swiper swiperAbout">
   <div class="swiper-wrapper">
     <!-- slide 01 -->
     <div class="swiper-slide">

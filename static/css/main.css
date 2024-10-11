@@ -1145,7 +1145,7 @@ html, body {
   background-color: #000;
 }
 
-.swiperHeaderText {
+.swiperAbout {
   width: 729px;
   height: 487px;
 }
@@ -1738,16 +1738,18 @@ input, textarea {
 
 .about__content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr auto 1fr;
+  grid-template-columns: 9fr auto 3fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 
 .about__img {
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 2;
 }
 
 .about__desc {
-  grid-column-start: 5;
+  grid-column-start: 2;
 }
 
 .about__header {

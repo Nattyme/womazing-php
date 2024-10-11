@@ -1,8 +1,8 @@
 function swiperAbout () {
 
-  const swiperHeaderText = new Swiper(".swiperHeaderAbout", {
+  const sliderAbout = new Swiper(".swiperAbout", {
     autoplay:{
-      delay:	5000,
+      delay:	2000,
       pauseOnMouseEnter: true,
     },
     spaceBetween: 30,
