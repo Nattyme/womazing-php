@@ -45,12 +45,10 @@
           <h2 class="h2">Связанные товары</h2>
         </div>
         <div class="cards-row">
-          <?php for ($i = 0; $i < 3; $i ++) : ?>
-            <!-- related card -->
-              <?php include ROOT  . 'templates/shop/_parts/_related-products.tpl';?>
-            
-            <!--// related card -->
-          <?php endfor; ?>
+          <!-- related card -->
+            <?php include ROOT  . 'templates/shop/_parts/_related-products.tpl';?>
+          <!--// related card -->
+     
          
         </div>
       </div>

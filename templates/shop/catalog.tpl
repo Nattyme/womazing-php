@@ -19,17 +19,11 @@
         </div>
         <div class="products__cards">
           <div class="tab" data-control="tab">
-            <div class="tab__nav" data-control="tab-nav">
-              <button class="tab__nav-button active" data-control="tab-button">Все</button>
-              <button class="tab__nav-button" data-control="tab-button">Пальто</button>
-              <button class="tab__nav-button" data-control="tab-button">Свитшоты</button>
-              <button class="tab__nav-button" data-control="tab-button">Кардиганы</button>
-              <button class="tab__nav-button" data-control="tab-button">Толстовки</button>
-            </div>
+            <?php include ROOT . 'templates/shop/nav/_products-nav.tpl';?>
             <div class="tab__content">
               <!-- tab block -->
               <div class="tab__block active" data-control="tab-block">
-                <?php for ($i = 0; $i < 9; $i ++) : ?>
+                <?php for ($i = 0; $i < 3; $i ++) : ?>
                   <!-- card -->
                   <?php include ROOT . 'templates/shop/_parts/_card.tpl'; ?>
                   <!--// card -->
