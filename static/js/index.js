@@ -4,6 +4,7 @@ import tab from './modules/tab.js';
 
 // swiper
 import swiperHeader from './modules/swiper.js';
+import swiperAbout from './modules/swiper-about.js';
 
 // header bg change on scroll
 import headerTopChange from './modules/header-bg-change.js';
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   tab();
   headerTopChange();
   swiperHeader();
+  swiperAbout();
   yMap();
 
 });

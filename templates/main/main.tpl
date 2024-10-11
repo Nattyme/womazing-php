@@ -121,13 +121,12 @@
       </div>
 
       <div class="about__content">
-        <div class="about__img">
-          <picture>
-            <source srcset="<?php echo HOST . 'static/img/about/01.webp 1x,' . 'static/img/about/01@2x.webp 2x';?>" type="image/webp" />
-            <source srcset="<?php echo HOST . 'static/img/about/01.jpg 1x,' . 'static/img/about/01@2x.jpg 2x';?>" type="image/jpeg" />
-            <img src="<?php echo HOST . 'static/img/about/01.jpg';?>" srcset="<?php echo HOST . 'static/img/about/01@2x.jpg';?>" alt="" />
-          </picture>
-        </div>
+      <div class="about__img">
+        <!-- slider about -->
+         <?php include ROOT . 'templates/main/parts/swiper-about.tpl';?>
+        <!--// slider about -->
+      </div>
+
         <div class="about__desc">
           <div class="about__header">
             Для каждой

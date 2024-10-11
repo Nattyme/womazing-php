@@ -1145,6 +1145,11 @@ html, body {
   background-color: #000;
 }
 
+.swiperHeaderText {
+  width: 729px;
+  height: 487px;
+}
+
 .tab__nav {
   margin-bottom: 65px;
   display: flex;
