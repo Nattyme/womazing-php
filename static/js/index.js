@@ -7,13 +7,15 @@ import swiperHeader from './modules/swiper.js';
 
 // header bg change on scroll
 import headerTopChange from './modules/header-bg-change.js';
-// import yMap from './modules/ymap.js';
+import yMap from './modules/ymap.js';
 // mobileNav();
 
 document.addEventListener("DOMContentLoaded", function() {
   tab();
   headerTopChange();
   swiperHeader();
+  yMap();
+
 });
 
-// yMap();
+

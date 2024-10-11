@@ -55,8 +55,8 @@
             </div>
           <!-- Заполненный профиль -->
           <?php else : ?>
-            <div class="row justify-content-center">
-              <div class="col-md-2">
+            <div class="profile__row">
+              <div class="profile__column profile__column--img">
                 <div class="avatar-big">
                   <?php if ( !empty($user->avatar)) : ?>
                     <img src="<?php echo HOST; ?>usercontent/avatars/<?php echo $user->avatar; ?>" alt="Аватарка" />
@@ -65,8 +65,8 @@
                   <?php endif; ?>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="definition-list mb-20">
+              <div class="profile__column profile__column--desc ">
+                <div class="profile__definition-list">
                   <?php if (!empty($user->name)) : ?>
                     <dl class="definition">
                       <dt class="definition__term">имя и фамилия</dt>

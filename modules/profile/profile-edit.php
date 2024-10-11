@@ -1,4 +1,7 @@
 <?php 
+  require_once ROOT . './libs/functions.php';
+  require_once ROOT . './libs/resize-and-crop.php';
+
   function updateUserAndGoToProfile($user) {
     if ( isset($_POST['updateProfile'])) {
       // Проверить поля на заполненность

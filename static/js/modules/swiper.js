@@ -16,14 +16,16 @@ function swiperHeader () {
     });
   
     const swiperHeaderImg = new Swiper(".swiperHeaderImg", {
-      watchSlidesProgress: false,
+      effect: "fade",
+      // watchSlidesProgress: false,
       speed: 2000,
       loop: true,
-      watchSlidesProgress: false,
       spaceBetween: 30,
+    
     });
 
-    
+    swiperHeaderText.controller.control = swiperHeaderImg;
+
 }
 
 export default swiperHeader;
