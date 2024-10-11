@@ -16,7 +16,6 @@ function swiperHeader () {
     });
   
     const swiperHeaderImg = new Swiper(".swiperHeaderImg", {
-      effect: "fade",
       // watchSlidesProgress: false,
       speed: 2000,
       loop: true,

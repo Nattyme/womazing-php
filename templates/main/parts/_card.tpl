@@ -1,5 +1,5 @@
 <?php for ($i = 0; $i < 4; $i++) : ?>
-  <a href="product.html" class="card">
+  <a href="<?php echo HOST . 'shop/1';?>" class="card">
     <div class="card__img">
       <svg class="icon icon--arrow-right">
         <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#arrow-right';?>"></use>

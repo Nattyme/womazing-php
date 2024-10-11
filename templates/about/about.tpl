@@ -6,7 +6,7 @@
           <h1 class="h1">О&#160;компании</h1>
         </div>
         <div class="breadcrumbs">
-          <p><a href="<?php echo HOST . 'main';?>">Главная</a>&#160;<span>&#8212;</span>&#160;О&#160;компании</p>
+          <p><a href="<?php echo HOST . 'main';?>">Главная</a>&#160;<span>&#8212;</span>&#160;<span class="breadcrumb breadcrumb--active">О&#160;компании</span></p>
         </div>
       </div>
 
