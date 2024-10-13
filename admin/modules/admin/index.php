@@ -1,4 +1,5 @@
 <?php
+
 //Запрос постов в БД с сортировкой id по убыванию
 $postCount = R::count('posts'); 
 $categoriesCount = R::count('categories'); 

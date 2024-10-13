@@ -15,6 +15,8 @@
 @import './blocks/_products-nav';
 @import './blocks/_form-contact';
 @import './blocks/_form';
+@import './blocks/_dashboard';
+@import './blocks/_definition';
 @import './blocks/_article';
 @import './blocks/_header-top';
 @import './blocks/_icons';
@@ -35,6 +37,8 @@
 @import './blocks/_avatar';
 @import './blocks/_form-order';
 @import './blocks/_notification.scss';
+@import './blocks/_admin-page.scss';
+@import './blocks/_admin-form.scss';
 @import './blocks/_authorization-form';
 
 /* Section */
@@ -56,3 +60,5 @@
 @import './sections/_page-order';
 @import './sections/_page-shopping-cart';
 @import './sections/_page-authorization';
+@import './sections/_admin-panel.scss';
+@import './sections/_control-panel.scss';
