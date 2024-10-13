@@ -8,7 +8,7 @@ $_SESSION['errors'] = array();
 $_SESSION['success'] = array();
 session_start();
 
-// Проверка на права доступао
+// Проверка на права доступа
 if ( !(isset($_SESSION['role']) && $_SESSION['role'] === 'admin')) {
   header('Location: ' . HOST . 'login');
 } 

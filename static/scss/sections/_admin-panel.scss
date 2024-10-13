@@ -1,5 +1,6 @@
 .admin-panel {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
@@ -21,6 +22,10 @@
   padding-right: 40px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.admin-panel ~ .header-top {
+  padding-top: 70px;
 }
 
 .admin-panel__message-icon {

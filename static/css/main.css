@@ -619,7 +619,7 @@ html, body {
 
 .header-top {
   position: sticky;
-  z-index: 999;
+  z-index: 10;
   top: 0;
   right: 0;
   left: 0;
@@ -755,6 +755,14 @@ html, body {
 
 .icon--slider-arrow-prev {
   transform: rotate(180deg);
+}
+
+.icon--profile {
+  stroke: #000;
+}
+
+.icon--logout {
+  stroke: #000;
 }
 
 .logo {
@@ -1648,6 +1656,7 @@ input, textarea {
 /* Section */
 .admin-panel {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
@@ -1661,6 +1670,10 @@ input, textarea {
   padding-right: 40px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.admin-panel ~ .header-top {
+  padding-top: 70px;
 }
 
 .admin-panel__message-icon {

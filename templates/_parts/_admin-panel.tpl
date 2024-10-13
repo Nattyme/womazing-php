@@ -67,12 +67,3 @@
 <?php endif; ?>
 
 
-  <!-- <div class="admin-panel">
-    <div class="admin-panel__block-list">
-    </div>
-    <div class="admin-panel__block-list">
-      <a href="<?php echo HOST; ?>login" class="admin-panel__block-button" title="Выйти из текущего профиля">Вход</a>
-    </div>
-
-  </div> -->
-
