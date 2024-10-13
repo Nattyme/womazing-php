@@ -3,19 +3,16 @@
   padding-bottom: 130px;
 }
 
+.about__img {
+  position: relative;
+}
+
 .about__content {
   display: grid;
-  grid-template-columns: 9fr auto 3fr;
-  column-gap: 30px;
-}
-
-.about__img {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-.about__desc {
-  grid-column-start: 2;
+  grid-template-columns: 6fr 3fr;
+  -moz-column-gap: 124px;
+  justify-content: space-between;
+  column-gap: 124px;
 }
 
 .about__header {

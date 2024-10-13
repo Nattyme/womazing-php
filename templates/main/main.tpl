@@ -14,8 +14,7 @@
             </div>
             <span class="button-solid">Открыть магазин</span>
           </a>
-
-          <?php include ROOT . 'templates/main/parts/swiper-pagination.tpl';?>
+          <div class="swiper-pagination swiper-pagination-custom swiperHeaderText-pagination"></div>
         </div>
 
         <!-- image -->
@@ -125,6 +124,21 @@
         <!-- slider about -->
          <?php include ROOT . 'templates/main/parts/swiper-about.tpl';?>
         <!--// slider about -->
+
+        <!-- slider arrows -->
+        <div class="swiper-arrows">
+          <div class="swiper-arrow swiperAbout-button-prev">
+            <svg class="icon icon--slider-arrow icon--slider-arrow-prev">
+              <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#slider-arrow';?>"></use>
+            </svg>
+          </div>
+          <div class="swiper-arrow  swiperAbout-button-next">
+            <svg class="icon icon--slider-arrow">
+              <use href="<?php echo HOST . 'static/img/svgsprite/sprite.symbol.svg#slider-arrow';?>"></use>
+            </svg>
+          </div>
+        </div>
+        <!-- // slider arrows -->
       </div>
 
         <div class="about__desc">
