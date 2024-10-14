@@ -22,6 +22,22 @@
   width: 900px;
 }
 
+.admin-form__title {
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-form .heading {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  color: #000000;
+}
+
 .admin-section-title {
   font-size: 26px;
   font-weight: 600;

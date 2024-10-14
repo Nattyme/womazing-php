@@ -1,0 +1,49 @@
+
+
+.table {
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+
+.admin-form {
+  max-width: 900px;
+  background: #ffffff;
+  padding: 20px 30px 34px 30px;
+}
+
+.table thead {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 120%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.table tbody tr {
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid rgba(126, 155, 189, 0.3);
+}
+
+.table tbody tr.message-new {
+  background-color: #edffd0;
+}
+
+.table tbody tr {
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid rgba(126, 155, 189, 0.3);
+}
+
+.block-text {
+  height: 60px;
+  overflow: hidden;
+}
+
+.table tbody td {
+  padding: 20px;
+}

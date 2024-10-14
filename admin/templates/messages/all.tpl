@@ -3,7 +3,7 @@
     <?php include ROOT . "admin/templates/components/errors.tpl"; ?>
     <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
-    <div class="admin-form__item d-flex justify-content-between mb-20">
+    <div class="admin-form__item admin-form__title">
       <h2 class="heading">Сообщения</h2>
     </div>
 
@@ -44,7 +44,12 @@
               <a target="_blank" href="<?php echo HOST . 'usercontent/contact-form/' . $message['fileNameSrc'];?>"><?php echo $message['fileNameOriginal']; ?></a>
             </td>
             <td>
-              <a href="<?php echo HOST . "admin/";?>messages?action=delete&id=<?php echo $message['id'];?>" class="icon-delete"></a>
+            <a href="<?php echo HOST . "admin/";?>messages?action=delete&id=<?php echo $message['id'];?>" class="link-above-others icon-delete">
+              <svg class="icon icon--delete">
+                <use href="https://womazing-php/static/img/svgsprite/sprite.symbol.svg#delete"></use>
+              </svg>  
+            </a>
+             
             </td>
           </tr>
         <?php endforeach; ?> 
