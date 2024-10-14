@@ -18,6 +18,8 @@
 
   font-size: 17px;
   line-height: 1.41;
+
+  transition: background-color 0.2s ease-in, opacity 0.2s ease-in;
 }
 
 .section-pagination__item.arrow {
@@ -27,6 +29,16 @@
 .section-pagination__item.active {
   background-color: #000;
   color: #fff;
+}
+
+.section-pagination__item:hover,
+.section-pagination__item.arrow:hover {
+  background-color: #eee;
+}
+
+.section-pagination__item.active:hover {
+  background-color: #000;
+  opacity: 0.8;
 }
 
 .pagination-button {

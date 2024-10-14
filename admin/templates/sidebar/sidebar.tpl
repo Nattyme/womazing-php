@@ -10,9 +10,9 @@ $messages = R::find('messages', 'ORDER BY id DESC');
       </a>
       <ul class="control-panel__list">
         <?php include ROOT . "admin/templates/sidebar/links/_admin.tpl";?>
-        <?php include ROOT . "admin/templates/sidebar/links/_blog.tpl";?>
         <?php include ROOT . "admin/templates/sidebar/links/_shop.tpl";?>
         <?php include ROOT . "admin/templates/sidebar/links/_pages.tpl";?>
+        <?php include ROOT . "admin/templates/sidebar/links/_blog.tpl";?>
         <?php include ROOT . "admin/templates/sidebar/links/_messages.tpl";?>
         <?php include ROOT . "admin/templates/sidebar/links/_comments.tpl";?>
         <?php include ROOT . "admin/templates/sidebar/links/_users.tpl";?>

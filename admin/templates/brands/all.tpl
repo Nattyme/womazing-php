@@ -4,8 +4,8 @@
     <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
     <div class="admin-form__item admin-form__title">
-      <h2 class="heading">Категории</h2>
-      <a class="button-solid button-solid--admin" href="<?php HOST;?>category-new">Создать новую категорию</a>
+      <h2 class="heading">Бренды</h2>
+      <a class="button-solid button-solid--admin" href="<?php HOST;?>brand-new">Создать новый бренд</a>
     </div>
 
     <!-- Таблица -->
@@ -18,21 +18,21 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($cats as $cat) : ?>
+        <?php foreach ($brands as $brand) : ?>
 
           <tr class="admin-form-table__row">
             <td class="admin-form-table__unit">
-                <?php echo $cat['id'];?>
+                <?php echo $brand['id'];?>
             </td>
             
             <td class="admin-form-table__unit">
-            <a class="link-to-page" href="<?php echo HOST; ?>admin/category-edit?id=<?php echo $cat['id'];?>">
-                <?php echo $cat['title'];?>
+            <a class="link-to-page" href="<?php echo HOST; ?>admin/brand-edit?id=<?php echo $brand['id'];?>">
+                <?php echo $brand['title'];?>
               </a>
             </td>
            
             <td class="admin-form-table__unit">
-              <a href="<?php echo HOST . "admin/";?>category-delete?id=<?php echo $cat['id'];?>" class="icon-delete link-above-others">
+              <a href="<?php echo HOST . "admin/";?>brand-delete?id=<?php echo $brand['id'];?>" class="icon-delete link-above-others">
                 <svg class="icon icon--delete">
                   <use href="https://womazing-php/static/img/svgsprite/sprite.symbol.svg#delete"></use>
                 </svg> 

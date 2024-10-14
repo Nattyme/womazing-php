@@ -1172,6 +1172,7 @@ html, body {
   border: 1px solid #000;
   font-size: 17px;
   line-height: 1.41;
+  transition: background-color 0.2s ease-in, opacity 0.2s ease-in;
 }
 
 .section-pagination__item.arrow {
@@ -1181,6 +1182,16 @@ html, body {
 .section-pagination__item.active {
   background-color: #000;
   color: #fff;
+}
+
+.section-pagination__item:hover,
+.section-pagination__item.arrow:hover {
+  background-color: #eee;
+}
+
+.section-pagination__item.active:hover {
+  background-color: #000;
+  opacity: 0.8;
 }
 
 .pagination-button {
@@ -1760,6 +1771,7 @@ input, textarea {
 .admin-form {
   padding: 20px 30px 34px 30px;
   max-width: unset;
+  min-width: 900px;
   width: auto;
   background-color: #fff;
 }
