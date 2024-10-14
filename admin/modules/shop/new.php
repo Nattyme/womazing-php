@@ -1,19 +1,19 @@
 <?php
 // Получаем  текущую секцию 
-$currentSection = getCurrentSection();
-$_SESSION['currentSection'] = $currentSection;
+// $currentSection = getCurrentSection();
+// $_SESSION['currentSection'] = $currentSection;
 
 // Находим категории, относящиеся к секции shop
-$catsArray = R::find('categories', ' section LIKE ? ORDER BY title ASC', ['shop']);
+// $catsArray = R::find('categories', ' section LIKE ? ORDER BY title ASC', ['shop']);
 
 // Создаем массив для категорий shop
-$cats = [];
-foreach ($catsArray as $key => $value) {
-  $cats[] = ['id' => $value['id'], 'title' => $value['title'], 'section' => $value['section']];
-}
+// $cats = [];
+// foreach ($catsArray as $key => $value) {
+//   $cats[] = ['id' => $value['id'], 'title' => $value['title'], 'section' => $value['section']];
+// }
 
 // Получаем бренды
-$brands = R::find('brands', 'ORDER BY title ASC'); 
+// $brands = R::find('brands', 'ORDER BY title ASC'); 
 
 if( isset($_POST['submit']) ) {
   // Проверка на заполненность названия

@@ -4,7 +4,7 @@
   <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
   <form class="admin-form" method="POST" action="<?php echo HOST;?>admin/message?id=<?php echo $message['id']; ?>">
-    <div class="admin-form__item admin-form__item--flex">
+    <div class="admin-form__item admin-form__title">
       <h2 class="heading">Сообщение №<?php echo $_GET['id'];?></h2>
       <div class="admin-form__date">
         <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#clock';?>" alt="Получено">

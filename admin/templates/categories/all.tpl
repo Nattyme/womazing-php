@@ -3,34 +3,47 @@
     <?php include ROOT . "admin/templates/components/errors.tpl"; ?>
     <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
-    <div class="admin-form__item d-flex justify-content-between mb-20">
+    <div class="admin-form__item admin-form__title">
       <h2 class="heading">Категории</h2>
-      <a class="secondary-button" href="<?php HOST;?>category-new?<?php echo $currentSection; ?>">Создать новую категорию</a>
+      <a class="button-solid button-solid--admin" href="<?php HOST;?>category-new">Создать новую категорию</a>
     </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Название</th>
-          <th></th>
+
+    <!-- Таблица -->
+    <table class="admin-form-table">
+      <thead class="admin-form-table__header">
+        <tr class="admin-form-table__row">
+          <th class="admin-form-table__unit">ID</th>
+          <th class="admin-form-table__unit">Название</th>
+          <th class="admin-form-table__unit"></th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($cats as $cat) : ?>
-          <tr>
-            <td><?php echo $cat['id'];?></td>
-            <td>
-              <a class="link-to-page" href="<?php echo HOST; ?>admin/category-edit?id=<?php echo $cat['id'];?>">
+
+          <tr class="admin-form-table__row">
+            <td class="admin-form-table__unit">
+                <?php echo $cat['id'];?>
+            </td>
+            
+            <td class="admin-form-table__unit">
+            <a class="link-to-page" href="<?php echo HOST; ?>admin/category-edit?id=<?php echo $cat['id'];?>">
                 <?php echo $cat['title'];?>
               </a>
             </td>
-            <td>
-              <a href="<?php echo HOST . "admin/";?>category-delete?id=<?php echo $cat['id'];?>" class="icon-delete"></a>
+           
+            <td class="admin-form-table__unit">
+              <a href="<?php echo HOST . "admin/";?>category-delete?id=<?php echo $cat['id'];?>" class="icon-delete link-above-others">
+                <svg class="icon icon--delete">
+                  <use href="https://womazing-php/static/img/svgsprite/sprite.symbol.svg#delete"></use>
+                </svg> 
+              </a>
             </td>
           </tr>
-        <?php endforeach; ?>
+          
+        <?php endforeach; ?> 
       </tbody>
     </table>
+    <!--// Таблица -->
 
     <!-- Пагинация -->
     <div class="admin-form__item pt-40">

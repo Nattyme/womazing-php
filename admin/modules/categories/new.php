@@ -1,6 +1,6 @@
 <?php
 // Получаем  текущую секцию
-$currentSection = getCurrentSection();
+// $currentSection = getCurrentSection();
 
 if( isset($_POST['submit']) ) {
   // Проверка на заполненность названия
@@ -10,26 +10,13 @@ if( isset($_POST['submit']) ) {
 
   if ( empty($_SESSION['errors'])) {
     $cat = R::dispense('categories');
-    $cat->section = $currentSection;
     $cat->title = $_POST['title'];
     R::store($cat);
     
     $_SESSION['success'][] = ['title' => 'Категория была успешно создана'];
 
-    if ( isset($_SESSION['currentSection']) && $_SESSION['currentSection'] === 'admin/shop-new') {
-      header('Location: ' . HOST . 'admin/shop-new');
-      exit();
-    } else if (isset($_SESSION['currentSection']) && $_SESSION['currentSection'] === 'admin/post-new') {
-      header('Location: ' . HOST . 'admin/post-new');
-      exit();
-    } else if (isset($_SESSION['currentSection']) && $_SESSION['currentSection'] === 'admin/project-new') {
-      header('Location: ' . HOST . 'admin/project-new');
-      exit();
-    } 
-    else {
-      header('Location: ' . HOST . 'admin/category?' . $currentSection);
-      exit();
-    }
+    header('Location: ' . HOST . 'admin/category');
+    exit();
   }
 }
 

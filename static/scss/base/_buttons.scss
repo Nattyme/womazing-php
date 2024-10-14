@@ -18,16 +18,6 @@
   }
 }
 
-.button-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 68px;
-  height: 68px;
-  background-color: rgba(110, 156, 159, 0.1);
-}
-
 .button-outline {
   display: inline-block;
   padding: 20px 0;
@@ -47,6 +37,22 @@
     background-color: var(--button-bg);
     color: #fff;
   }
+}
+
+.button-solid--admin, .button-outline--admin {
+  padding: 12px 0;
+  min-width: 200px;
+  height: 48px;
+}
+
+.button-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 68px;
+  height: 68px;
+  background-color: rgba(110, 156, 159, 0.1);
 }
 
 .button-fake {

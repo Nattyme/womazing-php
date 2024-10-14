@@ -2,11 +2,11 @@
   padding: 20px 30px 34px 30px;
   // width: 900px;
   max-width: unset;
-  width: 100%;
+  width: auto;
   background-color: #fff;
 }
 
-.admin-form__date{
+.admin-form__date {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #7e9bbd;
@@ -67,6 +67,35 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
+}
+
+.admin-form__input, .admin-form__textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.admin-form__input {
+  padding: 10px 14px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #7E9BBD;
+  border-radius: 6px;
+  outline: none;
+}
+
+.admin-form__input--width-label {
+  padding: 10px 22px;
+}
+
+.admin-form__label > .admin-form__input:first-child {
+  margin-top: 10px;
+}
+
+.admin-form__item--buttons {
+  display: flex;
+  column-gap: 30px;
 }
 
 /* Single order in admin panel*/

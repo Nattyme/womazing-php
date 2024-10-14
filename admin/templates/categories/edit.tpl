@@ -4,15 +4,16 @@
   <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
   <form class="admin-form" method="POST" action="<?php echo HOST;?>admin/category-edit?id=<?php echo $_GET['id'];?>">
-    <div class="admin-form__item">
+    <div class="admin-form__item admin-form__title">
       <h2 class="heading">Редактировать категорию</h2>
     </div>
+
     <div class="admin-form__item">
-      <label class="input__label">
+      <label class="admin-form__label">
         Название категории
         <input 
           name="title" 
-          class="input input--width-label" 
+          class="admin-form__input admin-form__input--width-label" 
           type="text" 
           placeholder="Заголовок категории" 
           value="<?php echo $cat['title'];?>"
@@ -20,15 +21,11 @@
       </label>
     </div>
 
-    <div class="admin-form__item buttons">
-      <button name="submit" value="submit" class="primary-button" type="submit">
+    <div class="admin-form__item admin-form__item--buttons">
+      <button name="submit" value="submit" class="button-solid button-solid--admin" type="submit">
         Сохранить изменения
       </button>
-      <?php if (isset($_POST['postEdit'])) : ?>
-        <a class="secondary-button" href="<?php echo HOST;?>admin/category?<?php echo $currentSection;?>" title="К списку категорий">К списку категорий</a>
-      <?php else : ?>
-        <a class="secondary-button" href="<?php echo HOST;?>admin/category?<?php echo $currentSection;?>" title="Отмена">Отмена</a>
-      <?php endif; ?>
+        <a class="button-outline button-outline--admin" href="<?php echo HOST;?>admin/category" title="К списку категорий">К списку категорий</a>
     </div>
   </form>
 </div>
