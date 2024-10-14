@@ -13,7 +13,18 @@
   <!-- Сообщения -->
     <a class="admin-panel__link" href="<?php echo HOST; ?>admin/messages" title="Перейти списку сообщений">
       <div class="admin-panel__message">
-        <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#mail';?>" alt="">
+        <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#mail';?>" alt="Сообщения">
+        <?php if ($messagesNewCounter > 0 ) : ?>
+              <div class="admin-panel__message-icon">
+                <?php 
+                  if ($messagesNewCounter <= $messagesDisplayLimit) {
+                    echo $messagesNewCounter;
+                  } else {
+                    echo '&hellip;';
+                  }
+                ?>
+              </div>
+            <?php endif;?>
       </div>
 
       <div class="span">Сообщение</div>

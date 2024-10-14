@@ -3,7 +3,7 @@
      title="Перейти страницу редактирования магазина"
      data-name="accordeon-title">
     <div class="control-panel__list-img-wrapper">
-      <img class="control-panel__list-img" src="<?php echo HOST;?>static/img/control-panel/folder.svg" alt="icon" />
+      <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#folder';?>" alt="icon" />
     </div>
     Магазин
   </a>
@@ -14,7 +14,7 @@
       <a class="control-panel__list-link control-panel__inner-link" 
         href="<?php echo HOST;?>admin/shop-new" title="Перейти на страницу добавления товара">
         <div class="control-panel__list-img-wrapper">
-          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/control-panel/corner.svg';?>" alt="icon" />
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
         </div>
         Добавить товар
       </a>
@@ -26,7 +26,7 @@
       <a class="control-panel__list-link control-panel__inner-link" 
         href="<?php echo HOST;?>admin/shop" title="Перейти на страницу всех товаров">
         <div class="control-panel__list-img-wrapper">
-          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/control-panel/corner.svg';?>" alt="icon" />
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
         </div>
         Все товары
       </a>
@@ -38,7 +38,7 @@
     <li class="control-panel__list-item">
       <a class="control-panel__list-link control-panel__inner-link" href="<?php echo HOST;?>admin/brand" title="Перейти на страницу редактирования брендов товаров">
         <div class="control-panel__list-img-wrapper">
-          <img class="control-panel__list-img" src="<?php echo HOST;?>static/img/control-panel/corner.svg" alt="icon" />
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
         </div>
         Все бренды
       </a>
@@ -49,11 +49,33 @@
     <li class="control-panel__list-item">
       <a class="control-panel__list-link control-panel__inner-link" href="<?php echo HOST;?>admin/category?shop" title="Перейти на страницу редактирования категорий товаров">
         <div class="control-panel__list-img-wrapper">
-          <img class="control-panel__list-img" src="<?php echo HOST;?>static/img/control-panel/corner.svg" alt="icon" />
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
         </div>
         Все категории
       </a>
     </li>
     <!-- Все категории -->
+
+    <!-- Заказы -->
+    <li class="control-panel__list-item">
+      <a class="control-panel__list-link control-panel__inner-link" href="<?php echo HOST;?>admin/orders" title="Перейти к списку всех заказов">
+        <div class="control-panel__list-img-wrapper">
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
+          <?php if ($ordersNewCounter > 0) : ?>
+            <div class="admin-panel__message-icon">
+              <?php 
+                if ($ordersNewCounter <= $ordersDisplayLimit) {
+                  echo $ordersNewCounter;
+                } else {
+                  echo '&hellip;';
+                } 
+              ?>
+            </div>
+          <?php endif;?>
+        </div>
+        Заказы
+      </a>
+    </li>
+    <!-- Заказы -->
   </ul>
 </li>

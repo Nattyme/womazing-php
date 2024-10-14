@@ -3,7 +3,7 @@
      title="Перейти на страницу редактирования блога" 
      data-name="accordeon-title">
     <div class="control-panel__list-img-wrapper">
-      <img class="control-panel__list-img" src="<?php echo HOST;?>static/img/control-panel/book.svg" alt="icon" />
+      <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#book';?>" alt="Админ панель" />
     </div>
     Блог
   </a>
@@ -13,7 +13,7 @@
       <a class="control-panel__list-link control-panel__inner-link" 
          href="<?php HOST;?>post-new">
         <div class="control-panel__list-img-wrapper">
-          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/control-panel/corner.svg';?>" alt="icon" />
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
         </div>
         Добавить пост
       </a>
@@ -24,7 +24,7 @@
     <li class="control-panel__list-item">
       <a class="control-panel__list-link control-panel__inner-link" href="<?php echo HOST;?>admin/blog">
         <div class="control-panel__list-img-wrapper">
-          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/control-panel/corner.svg';?>" alt="icon" />
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
         </div>
         Все записи
       </a>
@@ -35,7 +35,7 @@
     <li class="control-panel__list-item">
       <a class="control-panel__list-link control-panel__inner-link" href="<?php echo HOST;?>admin/category?blog" title="Перейти на страницу редактирования категорий публикаций">
         <div class="control-panel__list-img-wrapper">
-          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/control-panel/corner.svg';?>" alt="icon" />
+          <img class="control-panel__list-img" src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#corner';?>" alt="icon" />
         </div>
         Все категории
       </a>

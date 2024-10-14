@@ -1,4 +1,6 @@
 <?php
+// print_r(ROOT . "admin/templates/_parts/pagination/_pagination.tpl");
+// die();
 if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id']) ) {
   // Проверка запроса на удаление
   $message = R::load('messages', $_GET['id']);

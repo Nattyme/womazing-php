@@ -6,15 +6,22 @@
 }
 
 .section-pagination__item {
+  padding: 8px 15px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 41px;
+
+  min-width: 41px;
   height: 41px;
   border: 1px solid #000;
 
   font-size: 17px;
   line-height: 1.41;
+}
+
+.section-pagination__item.arrow {
+  padding: 10px 10px;
 }
 
 .section-pagination__item.active {

@@ -1,8 +1,16 @@
+.admin-form {
+  width: 900px;
+}
+
 .admin-form__date{
   font-family: Montserrat, sans-serif;
   font-size: 16px;
   color: #7E9BBD;
   line-height: 1.3;
+}
+
+.admin-form table {
+  margin-bottom: 40px;
 }
 
 .admin-form__date img {
@@ -18,9 +26,11 @@
   column-gap: 20px;
 }
 
-.admin-form {
-  width: 900px;
+.admin-form__item + .admin-form__item {
+  margin-top: 30px;
 }
+
+
 
 .admin-form__title {
   margin-bottom: 20px;
@@ -44,6 +54,22 @@
   margin: 30px -30px 20px;
   padding: 15px 30px;
   background-color: #efefef;
+}
+
+.admin-form__item .input__label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.admin-form__date img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 7px;
+  margin-bottom: 4px;
 }
 
 /* Single order in admin panel*/

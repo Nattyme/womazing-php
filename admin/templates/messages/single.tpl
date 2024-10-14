@@ -7,7 +7,7 @@
     <div class="admin-form__item admin-form__item--flex">
       <h2 class="heading">Сообщение №<?php echo $_GET['id'];?></h2>
       <div class="admin-form__date">
-        <img src="<?php echo HOST;?>static/img/favicons/clock.svg" alt="Получено">
+        <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#clock';?>" alt="Получено">
         Получено
         <?php echo rus_date("j F Y в H:i", $message['timestamp']); ?>              
       </div>

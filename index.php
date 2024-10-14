@@ -9,6 +9,12 @@ $_SESSION['success'] = array();
 
 session_start();
 
+require ROOT . 'modules/settings/settings.php';
+require ROOT . 'modules/admin-panel/admin-panel.php';
+// require ROOT . 'modules/navigation/navigation.php';
+require ROOT . 'modules/cart/usercart.php';
+// require ROOT . 'modules/favorite/userfavorite.php';
+
 $uriModule = getModuleName();
 $uriGet = getUriGet();
 $uriGetParam = getUriGetParam();
