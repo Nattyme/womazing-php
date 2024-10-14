@@ -74,39 +74,6 @@ switch ($uriModule) {
     require ROOT . "admin/modules/brands/delete.php";
     break;
 
-   // ::::::::::::: TECHNOLOGIES :::::::::::::::::::
-   case 'technology':
-    require ROOT . "admin/modules/technologies/all.php";
-    break;
-
-  case 'technology-new':
-    require ROOT . "admin/modules/technologies/new.php";
-    break;
-
-  case 'technology-edit':
-    require ROOT . "admin/modules/technologies/edit.php";
-    break;
-
-  case 'technology-delete':
-    require ROOT . "admin/modules/technologies/delete.php";
-    break;
-  // ::::::::::::: PORTFOLIO :::::::::::::::::::
-  case 'portfolio':
-    require ROOT . "admin/modules/portfolio/all.php";
-    break;
-
-  case 'project-new':
-    require ROOT . "admin/modules/portfolio/new.php";
-    break;
-
-  case 'project-edit':
-    require ROOT . "admin/modules/portfolio/edit.php";
-    break;
-
-  case 'project-delete':
-    require ROOT . "admin/modules/portfolio/delete.php";
-    break;
-
   // ::::::::::::: USERS :::::::::::::::::::
   case 'users':
     require ROOT . "admin/modules/users/all.php";

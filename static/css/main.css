@@ -1966,8 +1966,7 @@ input, textarea {
 }
 
 .contacts__form {
-  width: 443px;
-  height: 462px;
+  margin-bottom: 62px;
 }
 
 .footer {
