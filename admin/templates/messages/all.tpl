@@ -1,67 +1,67 @@
 <div class="admin-page__content-form">
-  <div class="admin-form" style="width: 900px;">
+  <div class="admin-form">
     <?php include ROOT . "admin/templates/components/errors.tpl"; ?>
     <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
+    <!-- Заголовок -->
     <div class="admin-form__item admin-form__title">
       <h2 class="heading">Сообщения</h2>
     </div>
+    <!-- Заголовок -->
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Отправитель</th>
-          <th>Email</th>
-          <th>Текст</th>
-          <th>Время</th>
-          <th>Файл</th>
-          <th></th>
+    <!-- Таблица -->
+    <table class="admin-form-table">
+      <thead class="admin-form-table__header">
+        <tr class="admin-form-table__row">
+          <th class="admin-form-table__unit">ID</th>
+          <th class="admin-form-table__unit">Отправитель</th>
+          <th class="admin-form-table__unit">Email</th>
+          <th class="admin-form-table__unit">Текст</th>
+          <th class="admin-form-table__unit">Время</th>
+          <th class="admin-form-table__unit">Файл</th>
+          <th class="admin-form-table__unit"></th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($messages as $message) : ?>
 
-          <tr <?php echo $message['status'] === 'new' ? 'class="message-new"' : NULL;?>>
-            <td>
+          <tr class="admin-form-table__row <?php echo $message['status'] === 'new' ? 'message-new' : NULL;?>">
+            <td class="admin-form-table__unit">
               <?php echo $message['id'];?>
             </td>
-            <td>
+            <td class="admin-form-table__unit block-text">
               <a class="link-to-page" href="<?php echo HOST;?>admin/message?id=<?php echo $message['id'];?>">
-                <?php echo $message['name'];?>
+                <p class="block-text__desc"><?php echo $message['name'];?></p>
               </a>
             </td>
-            <td>
+            <td class="admin-form-table__unit">
               <?php echo $message['email'];?>
             </td>
-            <td class="block-text">
+            <td class="admin-form-table__unit block-text">
               <p class="block-text__desc"><?php echo $message['message'];?></p>
             </td>
-            <td>
+            <td class="admin-form-table__unit">
               <?php echo rus_date("j. m. Y. H:i", $message['timestamp']); ?>
             </td>
-            <td>
+            <td class="admin-form-table__unit">
               <a target="_blank" href="<?php echo HOST . 'usercontent/contact-form/' . $message['fileNameSrc'];?>"><?php echo $message['fileNameOriginal']; ?></a>
             </td>
-            <td>
-            <a href="<?php echo HOST . "admin/";?>messages?action=delete&id=<?php echo $message['id'];?>" class="link-above-others icon-delete">
-              <svg class="icon icon--delete">
-                <use href="https://womazing-php/static/img/svgsprite/sprite.symbol.svg#delete"></use>
-              </svg>  
-            </a>
-             
+            <td class="admin-form-table__unit">
+              <a href="<?php echo HOST . "admin/";?>messages?action=delete&id=<?php echo $message['id'];?>" class="link-above-others icon-delete">
+                <svg class="icon icon--delete">
+                  <use href="https://womazing-php/static/img/svgsprite/sprite.symbol.svg#delete"></use>
+                </svg>  
+              </a>
             </td>
           </tr>
+          
         <?php endforeach; ?> 
       </tbody>
     </table>
+    <!--// Таблица -->
     
     <!-- Пагинация -->
-    <div class="admin-form__item pt-40">
-      <div class="section-pagination">
-          <?php include ROOT . "admin/templates/_parts/pagination/_pagination.tpl"; ?>
-      </div>
-    </div>
+    <?php include ROOT . "admin/templates/_parts/pagination/_pagination.tpl"; ?>
     <!--// Пагинация -->
   </div>
 </div>

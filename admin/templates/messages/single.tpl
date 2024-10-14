@@ -14,21 +14,21 @@
     </div>
 
     <div class="admin-form__item">
-      <label class="input__label mb-10">
+      <label class="admin-form__label">
         Имя отправителя
       </label>
       <p><?php echo $message['name']; ?></p>
     </div>
 
     <div class="admin-form__item">
-      <label class="input__label mb-10">
+      <label class="admin-form__label">
         Email отправителя
       </label>
       <p><?php echo $message['email']; ?></p>
     </div>
 
     <div class="admin-form__item">
-      <label class="input__label mb-10">
+      <label class="admin-form__label">
         Текст сообщения
       </label>
       <p>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="admin-form__item">
-      <label class="input__label mb-10">
+      <label class="admin-form__label">
         Прикреплённый файл
       </label>
       <p>

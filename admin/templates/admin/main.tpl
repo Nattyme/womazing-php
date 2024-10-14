@@ -4,7 +4,7 @@
   <?php include ROOT . "admin/templates/components/errors.tpl"; ?>
   <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
-  <div class="admin-form_item d-flex justify-content-between mb-20">
+  <div class="admin-form__item admin-form__title">
     <h2 class="heading">Админ панель</h2>
   </div>
 
@@ -18,7 +18,7 @@
         </div>
         <div class="dashboard-item__value"><?php echo $postCount;?></div>
         <div class="dashboard-item__action">
-          <a href="<?php echo HOST; ?>admin/post-new" class="secondary-button">Добавить пост</a>
+          <a href="<?php echo HOST; ?>admin/post-new" class="button-solid">Добавить пост</a>
         </div>
       </section>
 
@@ -31,7 +31,7 @@
         </div>
         <div class="dashboard-item__value"><?php echo $categoriesCount;?></div>
         <div class="dashboard-item__action">
-          <a href="<?php echo HOST; ?>admin/category-new" class="secondary-button">Добавить категорию</a>
+          <a href="<?php echo HOST; ?>admin/category-new" class="button-solid">Добавить категорию</a>
         </div>
       </section>
 
@@ -43,19 +43,6 @@
           </a>
         </div>
         <div class="dashboard-item__value"><?php echo $commentsCount;?></div>
-      </section>
-
-      <section class="dashboard-item">
-        <div class="dashboard-item__title">
-          <a href="<?php echo HOST; ?>admin/portfolio">
-            <?php echo num_decline( $projectsCount, ['Проект', 'Проекта', 'Проектов']); ?> 
-            в портфолио
-          </a>
-        </div>
-        <div class="dashboard-item__value"><?php echo $projectsCount;?></div>
-        <div class="dashboard-item__action">
-          <a href="<?php echo HOST; ?>admin/project-new" class="secondary-button">Добавить проект</a>
-        </div>
       </section>
 
       <section class="dashboard-item">

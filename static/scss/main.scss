@@ -10,23 +10,23 @@
 @import './base/_typoghraphy';
 
 /* Blocks */
+@import './blocks/_logo';
 @import './blocks/_card';
-@import './blocks/_table';
 @import './blocks/_components';
+@import './blocks/_nav';
+@import './blocks/_sub-nav';
+@import './blocks/_sub-nav-inner';
 @import './blocks/_products-nav';
-@import './blocks/_form-contact';
 @import './blocks/_form';
+@import './blocks/_form-contact';
+@import './blocks/_authorization-form';
 @import './blocks/_dashboard';
 @import './blocks/_definition';
 @import './blocks/_article';
 @import './blocks/_header-top';
 @import './blocks/_icons';
-@import './blocks/_logo';
 @import './blocks/_mobile-nav';
 @import './blocks/_nav-icon';
-@import './blocks/_nav';
-@import './blocks/_sub-nav';
-@import './blocks/_sub-nav-inner';
 @import './blocks/_pagination';
 @import './blocks/_swiper';
 @import './blocks/_swiper-about';
@@ -40,7 +40,7 @@
 @import './blocks/_notification.scss';
 @import './blocks/_admin-page.scss';
 @import './blocks/_admin-form.scss';
-@import './blocks/_authorization-form';
+@import './blocks/_admin-form-table';
 
 /* Section */
 @import './sections/_admin-panel.scss';

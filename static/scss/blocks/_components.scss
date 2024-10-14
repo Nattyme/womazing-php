@@ -97,3 +97,18 @@
   font-size: 17px;
   line-height: 1.4;
 }
+
+.block-text {
+  height: 60px;
+  overflow: hidden;
+}
+
+.block-text__desc {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+
+  max-width:150px
+}
