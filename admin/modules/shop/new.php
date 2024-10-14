@@ -4,7 +4,7 @@
 // $_SESSION['currentSection'] = $currentSection;
 
 // Находим категории, относящиеся к секции shop
-// $catsArray = R::find('categories', ' section LIKE ? ORDER BY title ASC', ['shop']);
+$cats = R::find('categories', 'ORDER BY title ASC');
 
 // Создаем массив для категорий shop
 // $cats = [];
@@ -13,7 +13,7 @@
 // }
 
 // Получаем бренды
-// $brands = R::find('brands', 'ORDER BY title ASC'); 
+$brands = R::find('brands', 'ORDER BY title ASC'); 
 
 if( isset($_POST['submit']) ) {
   // Проверка на заполненность названия

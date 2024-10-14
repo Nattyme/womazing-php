@@ -70,11 +70,42 @@
   line-height: 1;
 }
 
+.admin-form__select-label {
+  display: block;
+ 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.admin-form__select {
+  margin-top: 20px;
+
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid #7e9bbd;
+  border-radius: 6px;
+  outline: none;
+}
+
 .admin-form__input, .admin-form__textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   resize: vertical;
+}
+
+.admin-form__textarea-label {
+  margin-bottom: 20px;
+
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .admin-form__input {
