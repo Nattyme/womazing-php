@@ -13,6 +13,15 @@
   }
 }
 
+.product-swiper__icon-wrapper  {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+}
+
 .product-swiper__button.swiper-button-next, .product-swiper__button.swiper-button-prev {
   color: #000;
 }
