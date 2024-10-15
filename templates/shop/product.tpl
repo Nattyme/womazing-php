@@ -16,9 +16,8 @@
       </header>
       
       <div class="product__content">
-        <div class="product__img">
-          <img src="<?php echo HOST . 'static/img/card-full/01.jpg';?>" srcset="<?php echo HOST . 'static/img/card-full/01@2x.jpg';?>" alt="">
-        </div>
+        <?php include ROOT . 'templates/shop/_parts/_product-swiper.tpl'; ?>
+
         <div class="product__desc">
           <div class="product__price"><span class="price">$311</span><span class="price-old">$450</span></div>
           <p>Бренд: <span>CINER</span></p>

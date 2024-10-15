@@ -11,30 +11,19 @@ main.product-page {
   margin-bottom: 102px;
 }
 
+.product__swiper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
 .product__content {
   display: flex;
   align-items: center;
   column-gap: 74px;
 }
 
-.product__price {
-}
-
 .product__cta {
   display: flex;
   column-gap: 11px;
-}
-
-.product__img {
-  overflow: hidden;
-
-  img {
-    width: 536px;
-    height: 720px;
-  }
-}
-
-.product__qty {
-}
-.button-solid {
 }
