@@ -7,14 +7,14 @@ main.product-page {
   margin-bottom: 130px;
 }
 
-.product__header {
-  margin-bottom: 102px;
-}
-
 .product__swiper {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
+}
+
+.product__price {
+  margin-bottom: 60px;
 }
 
 .product__content {
@@ -27,3 +27,12 @@ main.product-page {
   display: flex;
   column-gap: 11px;
 }
+
+.product__text {
+  margin-bottom: 14px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+}
+

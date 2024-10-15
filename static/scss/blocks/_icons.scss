@@ -11,11 +11,7 @@
 	height: 25px;
 }
 
-.icon--logo {
-	fill: #000;
-}
-
-.icon--shopping-bag {
+.icon--logo, .icon--shopping-bag, .icon--arrow-right.dark  {
 	fill: #000;
 }
 
@@ -30,17 +26,10 @@
   height: 24px;
 }
 
-.icon--arrow-right.dark {
-  stroke: #000;
-}
-
-.icon--approved,
-.icon--settings,
-.icon--hand 
-{
-  width: 61px;
-  height: 61px;
-	fill: #000;
+.icon--approved, .icon--wheel, .icon--hand {
+  width: 60px;
+  height: 60px;
+  fill: #000;
 }
 
 .icon--phone {
@@ -56,9 +45,7 @@
   fill: #fff;
 }
 
-.icon--instagram, 
-.icon--facebook, 
-.icon--twitter {
+.icon--instagram, .icon--facebook, .icon--twitter {
   width: 23px;
   height: 23px;
   fill: #000;
@@ -89,8 +76,6 @@
 }
 
 .icon--slider-arrow {
-  width: 30px;
-  height: 14px;
   stroke: #000;
 }
 
@@ -103,5 +88,6 @@
 }
 
 .icon--logout {
-  stroke: #000;
+  fill: #000;
 }
+

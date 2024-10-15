@@ -79,37 +79,36 @@
                 </div>
 
                 <div class="form-order__row">
-
                   <label class="radio-button">
-                    <input class="radio-button-real" name="select-payment" type="radio">
-                    <span class="radio-button-custom"></span>
+                    <input class="radio-button-real " name="select-payment" type="radio">
+                    <span class="radio-button-custom radio-button-custom--before radio-button-custom--payment"></span>
                     <div class="form-order__img-wrapper">
-                      <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#mir';?>" alt="mir">
+                      <img src="./img/svgsprite/stack/svg/sprite.stack.svg#mir" alt="mir">
                     </div>
                   </label>
 
                   <label class="radio-button">
                     <input class="radio-button-real" name="select-payment" type="radio">
-                    <span class="radio-button-custom"></span>
+                    <span class="radio-button-custom radio-button-custom--before radio-button-custom--payment"></span>
                     <div class="form-order__img-wrapper">
-                      <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#visa';?>" alt="visa">
+                      <img src="./img/svgsprite/stack/svg/sprite.stack.svg#visa" alt="visa">
                     </div>
                   </label>
               
                   <label class="radio-button">
                     <input class="radio-button-real" name="select-payment" type="radio">
-                    <span class="radio-button-custom"></span>
+                    <span class="radio-button-custom radio-button-custom--before radio-button-custom--payment"></span>
                     <div class="form-order__img-wrapper">
-                      <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#paypal';?>" alt="paypal">
+                      <img src="./img/svgsprite/stack/svg/sprite.stack.svg#paypal" alt="paypal">
                     </div>
                 
                   </label>
 
                   <label class="radio-button">
                     <input class="radio-button-real" name="select-payment" type="radio">
-                    <span class="radio-button-custom"></span>
+                    <span class="radio-button-custom radio-button-custom--before radio-button-custom--payment"></span>
                     <div class="form-order__img-wrapper">
-                      <img src="<?php echo HOST . 'static/img/svgsprite/stack/svg/sprite.stack.svg#mastercard';?>" alt="mastercard">
+                      <img src="./img/svgsprite/stack/svg/sprite.stack.svg#mastercard" alt="mastercard">
                     </div>
                   
                   </label>

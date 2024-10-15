@@ -711,6 +711,28 @@ html, body {
   padding-right: 93px;
 }
 
+.form-product__row {
+  margin-bottom: 60px;
+}
+
+.form-product__button {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.form-product__amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
+  border: 1px solid #afafaf;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
 .form-input {
   padding-bottom: 16px;
   width: 100%;
@@ -951,11 +973,7 @@ html, body {
   height: 25px;
 }
 
-.icon--logo {
-  fill: #000;
-}
-
-.icon--shopping-bag {
+.icon--logo, .icon--shopping-bag, .icon--arrow-right.dark {
   fill: #000;
 }
 
@@ -970,15 +988,9 @@ html, body {
   height: 24px;
 }
 
-.icon--arrow-right.dark {
-  stroke: #000;
-}
-
-.icon--approved,
-.icon--settings,
-.icon--hand {
-  width: 61px;
-  height: 61px;
+.icon--approved, .icon--wheel, .icon--hand {
+  width: 60px;
+  height: 60px;
   fill: #000;
 }
 
@@ -995,9 +1007,7 @@ html, body {
   fill: #fff;
 }
 
-.icon--instagram,
-.icon--facebook,
-.icon--twitter {
+.icon--instagram, .icon--facebook, .icon--twitter {
   width: 23px;
   height: 23px;
   fill: #000;
@@ -1028,8 +1038,6 @@ html, body {
 }
 
 .icon--slider-arrow {
-  width: 30px;
-  height: 14px;
   stroke: #000;
 }
 
@@ -1042,7 +1050,7 @@ html, body {
 }
 
 .icon--logout {
-  stroke: #000;
+  fill: #000;
 }
 
 .mobile-nav {
@@ -1541,6 +1549,101 @@ input, textarea {
   outline: none;
 }
 
+.radio-button-row {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+}
+
+.radio-button-real {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.radio-button-custom {
+  position: relative;
+  display: inline-block;
+  vertical-align: sub;
+  transition: color 0.3s ease, background-color 0.2s ease-in;
+}
+.radio-button-custom--bg-gray {
+  background-color: #927876;
+}
+.radio-button-custom--bg-khaki {
+  background-color: #d4d4d4;
+}
+.radio-button-custom--bg-coral {
+  background-color: #fd9696;
+}
+.radio-button-custom--bg-gold {
+  background-color: #fdc796;
+}
+
+.radio-button-custom.radio-button-custom--payment {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #000;
+}
+
+.radio-button-custom--size {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  border: 1px solid #000;
+}
+
+.radio-button-custom--colour {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.radio-button-real:focus + .radio-button-custom--before::before {
+  box-shadow: 0px 0px 0px 1px #000, 0px 0px 10px #ccc;
+}
+
+.radio-button-custom--before::before {
+  content: "";
+  /* Рисуем квадрат*/
+  display: inline-block;
+  /* Выравниваем по центру */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in;
+}
+
+.radio-button-custom.radio-button-custom--payment::before {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+}
+
+/*
+Активируем фейковый(декоративный) чекбокс
+*/
+.radio-button-real:checked + .radio-button-custom--before::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-button-real:checked + .radio-button-custom--size {
+  background-color: #000;
+  color: #fff;
+}
+
+.radio-button-real:checked + .radio-button-custom--colour {
+  border-color: #000;
+}
+
 .definition-list .definition + .definition {
   margin-top: 20px;
 }
@@ -1678,56 +1781,6 @@ input, textarea {
 
 .form-order__button {
   margin-top: 47px;
-}
-
-.radio-button {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 14px;
-       column-gap: 14px;
-}
-
-.radio-button-real {
-  width: 0;
-  height: 0;
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
-.radio-button-custom {
-  position: relative;
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  border: 1px solid #000;
-  vertical-align: sub;
-}
-
-.radio-button-real:focus + .radio-button-custom {
-  box-shadow: 0px 0px 0px 1px #000, 0px 0px 10px #ccc;
-}
-
-.radio-button-custom::before {
-  content: "";
-  /* Рисуем квадрат*/
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  /* Выравниваем по центру */
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 0.2s ease-in;
-}
-
-/*
-Активируем фейковый(декоративный) чекбокс
-*/
-.radio-button-real:checked + .radio-button-custom::before {
-  transform: translate(-50%, -50%) scale(1);
 }
 
 .form-order__img-wrapper {
@@ -2470,14 +2523,14 @@ main.product-page {
   margin-bottom: 130px;
 }
 
-.product__header {
-  margin-bottom: 102px;
-}
-
 .product__swiper {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
+}
+
+.product__price {
+  margin-bottom: 60px;
 }
 
 .product__content {
@@ -2491,6 +2544,13 @@ main.product-page {
   display: flex;
   -moz-column-gap: 11px;
        column-gap: 11px;
+}
+
+.product__text {
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 .products__header {

@@ -20,19 +20,76 @@
 
         <div class="product__desc">
           <div class="product__price"><span class="price">$311</span><span class="price-old">$450</span></div>
-          <p>Бренд: <span>CINER</span></p>
-          <form action="" class="form" method="POST">
-            <div class="form__bottom">
-              <div class="input-wrapper">
-                <input class="input" type="text" value="0">
-              </div>
-              <button class="button-solid" type="submit">Добавить в корзину</button>
-            </div>   
-          
-          </form>
+      
+            <form action="" class="form-product" method="POST">
+              <!-- size -->
+              <div class="form-product__row">
+                <div class="product__text">
+                  <p>Выберите размер</p>
+                </div>
+                <div class="radio-button-row">
 
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-size" type="radio">
+                    <span class="radio-button-custom radio-button-custom--size">S</span>
+                  </label>
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-size" type="radio" checked>
+                    <span class="radio-button-custom radio-button-custom--size">M</span>
+                  </label>
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-size" type="radio">
+                    <span class="radio-button-custom radio-button-custom--size">L</span>
+                  </label>
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-size" type="radio">
+                    <span class="radio-button-custom radio-button-custom--size">XL</span>
+                  </label>
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-size" type="radio">
+                    <span class="radio-button-custom radio-button-custom--size">XXL</span>
+                  </label>
+              
+                </div>
+              </div>
+              <!--// size -->
+
+              <div class="form-product__row">
+                <div class="product__text">
+                  <p>Выберите цвет</p>
+                </div>
+                
+                <div class="radio-button-row">
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-colour" type="radio">
+                    <span class="radio-button-custom radio-button-custom--colour radio-button-custom--bg-gray"></span>
+                  </label>
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-colour" type="radio" checked>
+                    <span class="radio-button-custom radio-button-custom--colour  radio-button-custom--bg-khaki"></span>
+                  </label>
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-colour" type="radio">
+                    <span class="radio-button-custom radio-button-custom--colour radio-button-custom--bg-coral"></span>
+                  </label>
+                  <label class="radio-button">
+                    <input class="radio-button-real" name="select-colour" type="radio">
+                    <span class="radio-button-custom radio-button-custom--colour radio-button-custom--bg-gold"></span>
+                  </label>
+                </div>
+              
+              </div>
+              <div class="form-product__button">
+                <div class="form-product__amount">
+                  <span>1</span>
+                </div>
+                <button class="button-solid" type="submit">Добавить в корзину</button>
+              </div>   
+            
+            </form>
+
+          </div>
         </div>
-      </div>
       
     </div>
     
