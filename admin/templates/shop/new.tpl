@@ -67,7 +67,7 @@
           <div class="block-upload__title">Фотография товара</div>
           <p>Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более. Вес до 2Мб.</p>
           <div class="block-upload__file-wrapper">
-            <input name="cover" class="file-button" type="file">
+            <input name="cover[]" class="file-button" type="file" multiple>
           </div>
         </div>
       </div>

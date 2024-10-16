@@ -4,7 +4,7 @@ require_once ROOT . "./libs/functions.php";
 // Показываем отдельную страницу товара
 $sqlQuery = 'SELECT
                 products.id, products.title, products.content, products.cover, products.timestamp, 
-                products.brand, products.edit_time, products.cat, products.price, products.brand,
+                products.brand, products.cat, products.price, products.brand,
                 categories.title AS cat_title,
                 brands.title AS brand_title
              FROM `products`
@@ -13,6 +13,7 @@ $sqlQuery = 'SELECT
              WHERE products.id = ? LIMIT 1';
 
 $product = R::getRow($sqlQuery, [$uriGet]);
+
 
 // // Комментарии
 // $sqlQueryComments = 'SELECT 
