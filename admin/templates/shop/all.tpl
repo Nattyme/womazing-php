@@ -1,42 +1,53 @@
 <div class="admin-page__content-form">
-  <div class="admin-form" style="width: 900px;">
+  <div class="admin-form">
     <?php include ROOT . "admin/templates/components/errors.tpl"; ?>
     <?php include ROOT . "admin/templates/components/success.tpl"; ?>
 
-    <div class="admin-form__item d-flex justify-content-between mb-20">
+    <!-- Заголовок -->
+    <div class="admin-form__item admin-form__title">
       <h2 class="heading">Магазин - все товары</h2>
-      <a class="secondary-button" href="<?php HOST;?>shop-new">Добавить товар</a>
+      <a class="button-solid button-solid--admin" href="<?php HOST;?>shop-new">Добавить товар</a>
     </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Название</th>
-          <th>Создан</th>
-          <th>Обновлён</th>
-          <th></th>
+    <!-- // Заголовок -->
+
+     <!-- Таблица -->
+     <table class="admin-form-table">
+      <thead class="admin-form-table__header">
+        <tr class="admin-form-table__row">
+          <th class="admin-form-table__unit">ID</th>
+          <th class="admin-form-table__unit">Название</th>
+          <th class="admin-form-table__unit">Создан</th>
+          <th class="admin-form-table__unit">ОбновлЁн</th>
+          <th class="admin-form-table__unit"></th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($products as $product) : ?>
-          <tr>
-            <td><?php echo $product['id']; ?></td>
-            <td>
-              <a class="link-to-page" href="<?php echo HOST . "admin/"; ?>shop-edit?id=<?php echo $product['id']; ?>"><?php echo $product['title']; ?></a>
-            </td>
-            <td>
-              <?php echo rus_date("j. m. Y. в H:i", $product['timestamp']); ?>
-            </td>
-            <td>
-              <?php echo !empty($product['edit_time']) ? rus_date("j. m. Y. в H:i", $product['edit_time']) : ''; ?>
-            </td>
-            <td>
-              <a href="<?php echo HOST . "admin/";?>shop-delete?id=<?php echo $product['id'];?>" class="icon-delete"></a>
-            </td>
-          </tr>
-        <?php endforeach; ?>
+
+        <tr class="admin-form-table__row">
+          <td class="admin-form-table__unit">
+            <a class="link-to-page" href="<?php echo HOST . "admin/"; ?>shop-edit?id=<?php echo $product['id']; ?>"><?php echo $product['title']; ?></a>
+          </td>
+          <td class="admin-form-table__unit block-text">
+            <a class="link-to-page" href="<?php echo HOST;?>admin/shop?id=<?php echo $product['id'];?>">
+              <p class="block-text__desc"><?php echo $product['title'];?></p>
+            </a>
+          </td>
+          <td class="admin-form-table__unit">
+            <?php echo rus_date("j. m. Y. в H:i", $product['timestamp']); ?>
+          </td>
+          <td class="admin-form-table__unit block-text">
+            <p class="block-text__desc"><?php echo $message['message'];?></p>
+          </td>
+          <td class="admin-form-table__unit">
+            <a href="<?php echo HOST . "admin/";?>shop-delete?id=<?php echo $product['id'];?>" class="icon-delete"></a>
+          </td>
+        </tr>
+          
+        <?php endforeach; ?> 
       </tbody>
     </table>
+    <!--// Таблица -->
 
     <!-- Пагинация -->
     <div class="admin-form__item pt-40">
