@@ -23,11 +23,11 @@
             <div class="tab__content">
               <!-- tab block -->
               <div class="tab__block active" data-control="tab-block">
-                <?php for ($i = 0; $i < 3; $i ++) : ?>
-                  <!-- card -->
-                  <?php include ROOT . 'templates/shop/_parts/_card.tpl'; ?>
-                  <!--// card -->
-                <?php endfor; ?>
+               
+                <!-- card -->
+                <?php include ROOT . 'templates/shop/_parts/_card.tpl'; ?>
+                <!--// card -->
+               
               </div>
               <!--// tab block -->
               

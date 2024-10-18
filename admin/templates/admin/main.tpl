@@ -1,5 +1,5 @@
-<div class="admin-page_content-form">
-  <div class="admin-form" style="width: 900px">
+<div class="admin-page__content-form">
+  <div class="admin-form">
 
   <?php include ROOT . "admin/templates/components/errors.tpl"; ?>
   <?php include ROOT . "admin/templates/components/success.tpl"; ?>

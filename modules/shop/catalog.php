@@ -5,40 +5,31 @@ $uriGet = getUriGet();
 $uriGetParam = getUriGetParam();
 
 // $pagination = pagination($settings['card_on_page_shop'], 'products');
-// $productsDB = R::find('products', 'ORDER BY id DESC ' . $pagination['sql_page_limit']);
+$pagination = pagination(9, 'products');
 
-// $products = array();
-// foreach ($productsDB as $current_product) {
-//     // Получаем  текущую секцию для записи в БД
-//     $currentSection = $uriModule;
+// $sqlQuery = 'SELECT
+//                 p.id, p.title, p.content, p.cover, p.timestamp, 
+//                 p.brand, p.cat, p.price, p.brand, s.cover AS product_cover, s.id, s.cover_small AS product_coverSmall,
+//                 s.cover_full AS product_coverFull, s.product_id AS product_id
+//              FROM `products` as p
+//              LEFT JOIN `sliders` as s ON p.id = product_id';
+$sqlQuery = 'SELECT
+                p.id, p.title, p.content, p.cover, p.timestamp, 
+                p.brand, p.cat, p.price, p.brand
+             FROM `products` as p
+             LEFT JOIN (
+                SELECT s.cover AS product_cover, s.id, s.cover_small AS product_coverSmall,
+                s.cover_full AS product_coverFull, s.product_id AS product_id
+                FROM `sliders` GROUP  BY product_id  
+             ) s ON p.id = product_id'
 
-//     // Узнаем категорию по GET запросу
-//     $categories = R::find('categories', ' section LIKE ? ', [$currentSection]);
-    
-//     $brands = R::find('brands');
-    
-//     // Заполняем массив product даными о нужном продукте
-//     $product['id'] = $current_product->id;
-//     $product['title'] = $current_product->title;
-//     $product['brand'] = $current_product->brand;
-//     $product['cat'] = $current_product->cat;
-//     $product['cover_small'] = $current_product->cover_small;
-//     $product['price'] =$current_product->price;
+// $sqlQueryWithLimit = $sqlQuery . $pagination["sql_page_limit"];
+$sqlQueryWithLimit = $sqlQuery . ' ' . $pagination["sql_page_limit"];
+// print_r($$sqlQueryWithLimit);
+// die();
 
-//     // Получчаем название категории текущего продука по ID категории
-//     if (isset($current_product['cat']) && !empty($current_product['cat']) && $current_product['cat'] === $categories[$current_product['cat']]['id']) {
-//       $current_product['cat'] = $categories[$current_product['cat']]['title'];
-//     }
+// $productsDB = R::getAll($sqlQueryWithLimit);
 
-//     // Получчаем название бренда текущего продука по ID бренда
-//     if (  isset($current_product['brand']) 
-//           && !empty($current_product['brand']) && $current_product['brand'] === $brands[$current_product['brand']]['id']) {
-//       $current_product['brand'] = $brands[$current_product['brand']]['title'];
-//     }
-//     $product['cat_title'] = $current_product['cat'];
-//     $product['brand_title'] = $current_product['brand'];
-//     $products [] = $product;
-// }
 
 $pageTitle = "Каталог товаров";
 

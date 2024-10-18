@@ -26,5 +26,3 @@ define('OUTLINK', $protocol);
 // Доп настройки
 define('SITE_NAME', 'womazing');
 define('SITE_EMAIL', 'info@womazing.com'); //email обяз-но домена, где расположен сайт, чтобы не поло в спам
-
-'webp' => array('image/webp');

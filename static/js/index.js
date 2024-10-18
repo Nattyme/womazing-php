@@ -22,5 +22,5 @@ swiperHeader();
 swiperAbout();
 swiperProduct();
 fancyBox();
-// yMap();
+yMap();
 // isMobile();
